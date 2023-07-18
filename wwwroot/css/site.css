@@ -157,7 +157,7 @@ footer .line {
 }
 
 .active {
-    background-color: var(--main-color-grey) !important;
+    background-color: var(--main-color-orange) !important;
     border: none !important;
     font-weight: bolder;
     color: var(--main-color-orange) !important;
@@ -176,6 +176,9 @@ footer .line {
     border: none;
 }
 
+nav-link:active {
+    background-color: var(--main-color-orange);
+}
 
 /* AREAS/IDENTITY _AUTHLAYOUT */
 #main-logo-login-logout {
@@ -210,6 +213,5 @@ footer .line {
 }
 
 .login-logout-card .card-body {
-    margin-bottom: 10rem;
-    padding: 5rem, 5rem;
+    padding: 10px 20px;
 }
