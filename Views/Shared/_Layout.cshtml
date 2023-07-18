@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Verion</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="img-fluid" src="~/images/logo-verion-shared.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,11 +39,102 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Verion - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!--footer class="border-top footer text-muted">-->  
+        <!--<div class="container">-->
+        <!--    &copy; 2023 - Verion - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>-->
+       <!-- </div>-->
+    <!--</footer>-->
+
+
+
+
+    <footer class="bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-sm-6">
+                        <a asp-area="" asp-controller="Home" asp-action="Index"><img class="img-fluid" src="~/images/logo-verion-shared.png"></a>
+                        <div class="line"></div>
+
+                        <!-- SOCIAL ICONS-->
+                        <div class="social-icons">
+                            <a asp-area="" asp-controller="Facebook" asp-action="Index"><i class="bi bi-facebook"></i></a>
+                            <a asp-area="" asp-controller="Instagram" asp-action="Index"><i class="bi bi-instagram"></i></a>
+                            <a asp-area="" asp-controller="Twitter" asp-action="Index"><i class="bi bi-twitter"></i></a>
+                            <a asp-area="" asp-controller="Youtube" asp-action="Index"><i class="bi bi-youtube"></i></a>
+                            <a asp-area="" asp-controller="Dribbble" asp-action="Index"><i class="bi bi-dribbble"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- SERVICES -->
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">VERION</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- ABOUT -->
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">SOBRE</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Empresa</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Parceiros</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Blog</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Fórum</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Documentação</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Galeria</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Downloads</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Cookies</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Mercado</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">CONTATO</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li><a asp-area="" asp-controller="SpaceReserved" asp-action="Index">Space Reserved for Content</a></li>
+                            <li class ="address-line-1"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-auto">
+                        <p class="mb-0">© Copyright Verion 2023. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+
+
+
+
+
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

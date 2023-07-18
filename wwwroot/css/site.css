@@ -1,11 +1,16 @@
+/* VARIABLES */
 :root {
     --main-color-orange: #F5A500;
     --second-color-orange: #F9B510;
     --main-color-grey: #EFEFEF;
     --second-color-grey: #4F4F4F;
     --main-color-white: #FEFEFE;
+    --main-color-font: #111111;
+    --main-font: "Roboto", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
 }
 
+/* SHARED _LAYOUT */
 html {
     font-size: 14px;
     position: relative;
@@ -24,9 +29,128 @@ html {
 
 body {
     background-color: var(--main-color-grey);
-    margin-bottom: 60px;
-    font-family: "Roboto", sans-serif;
+    color: var(--main-color-font);
+    font-family: var(--main-font);
+    line-height: 1.7;
 }
+
+/* GENERAL TEXT */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+    color: var(--main-color-font);
+}
+
+/* LINKS */
+    h1 a {
+        text-decoration: none;
+        color: var(--main-color-font);
+        transition: var(--transition);
+    }
+
+a {
+    text-decoration: none;
+    color: var(--main-color-font);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--main-color-orange);
+}
+
+
+/* FORMS */
+.form-control:focus {
+    border-color: var(--main-color-orange);
+    box-shadow: inset 0 0 0 var(--main-color-orange), 0 0 0 var(--main-color-orange);
+}
+
+/* BUTTONS */
+.btn-primary {
+    background-color: var(--main-color-orange);
+    border-color: var(--main-color-orange);
+}
+
+.btn-primary:hover {
+    background-color: var(--second-color-orange);
+    border-color: var(--second-color-orange);
+}
+
+/* CHECKBOXES */
+.form-check-input {
+    background-color: var(--main-color-white) !important;
+    border: none;
+    box-shadow: none !important;
+    margin-bottom: 1rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--second-color-orange) !important;
+    border-color: var(--second-color-orange);
+}
+
+.custom-control-input {
+    background-color: var(--main-color-gray);
+    border-color: var(--main-color-gray);
+}
+
+.custom-control-input:focus, .custom-control-label::before {
+    box-shadow: none !important;
+
+}
+
+/* ICONS */
+.bi {
+    color: var(--main-color-orange);
+}
+
+/* FOOTER ELEMENTS ONLY */
+footer {
+    padding-top: 120px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+footer li, footer p, footer a {
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--main-color-orange);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--second-color-grey);
+}
+
 
 .custom-div {
     background-color: var(--main-color-grey);
@@ -52,7 +176,18 @@ body {
     border: none;
 }
 
-/*-------------------------------------------------------------*/
+
+/* AREAS/IDENTITY _AUTHLAYOUT */
+#main-logo-login-logout {
+    margin-top: 10rem;
+    width: 100%;
+}
+
+#forgot-password {
+    font-weight: 500;
+    color: var(--main-color-orange)
+}
+
 /* LOGIN LOGOUT PAGE */
 .login-logout-card .card-header {
     padding: 0px 0px 12px 0px;
@@ -75,60 +210,6 @@ body {
 }
 
 .login-logout-card .card-body {
-    padding: 10px 20px;
-}
-/*-------------------------------------------------------------*/
-/* FORMS */
-.form-control:focus {
-    border-color: var(--main-color-orange);
-    box-shadow: inset 0 0 0 var(--main-color-orange), 0 0 0 var(--main-color-orange);
-}
-/*-------------------------------------------------------------*/
-/* BUTTONS */
-.btn-primary {
-    background-color: var(--main-color-orange);
-    border-color: var(--main-color-orange);
-}
-
-.btn-primary:hover {
-        background-color: var(--second-color-orange);
-        border-color: var(--second-color-orange);
-}
-/*-------------------------------------------------------------*/
-/* CHECKBOXES */
-.form-check-input {
-    background-color: var(--main-color-white) !important;
-    border: none;
-    box-shadow: none !important;
-    margin-bottom: 1rem;
-}
-
-.form-check-input:checked {
-        background-color: var(--second-color-orange) !important;
-        border-color: var(--second-color-orange);
-}
-
-.custom-control-input {
-    background-color: var(--main-color-gray);
-    border-color: var(--main-color-gray);
-}
-
-.custom-control-input:focus, .custom-control-label::before {
-        box-shadow: none !important;
-}
-/*-------------------------------------------------------------*/
-/* ICONS */
-.bi {
-    color: var(--main-color-orange);
-}
-/*-------------------------------------------------------------*/
-/* ID */
-#main-logo-login-logout {
-    margin-top: 10rem;
-    width: 100%;
-}
-
-#forgot-password {
-    font-weight: 500;
-    color: var(--main-color-orange)
+    margin-bottom: 10rem;
+    padding: 5rem, 5rem;
 }
