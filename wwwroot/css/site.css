@@ -54,5 +54,10 @@ body {
 /* ID */
 #main-logo-login-logout {
     margin-top: 10rem;
-    width: 35%;
+    width: 100%;
+}
+
+#forgot-password {
+    font-weight: 500;
+    color:var(--main-color-orange)
 }
