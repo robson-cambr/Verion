@@ -27,6 +27,7 @@ body {
     margin-bottom: 60px;
     font-family: "Roboto", sans-serif;
 }
+
 .custom-div {
     background-color: var(--main-color-grey);
 }
@@ -45,6 +46,7 @@ body {
 .card {
     border: none;
 }
+
 .card-header {
     margin-top: 2rem;
     border: none;
@@ -56,18 +58,22 @@ body {
     padding: 0px 0px 12px 0px;
     border: none;
 }
+
 .login-logout-card ul.nav-tabs {
     margin: 0px 0px -12px 0px;
 }
+
 .login-logout-card li.nav-item {
     width: 50%;
 }
+
 .login-logout-card a.nav-link {
     color: var(--second-color-grey);
     font-size: 1rem;
     text-align: center;
     padding: 1rem;
 }
+
 .login-logout-card .card-body {
     padding: 10px 20px;
 }
@@ -83,10 +89,11 @@ body {
     background-color: var(--main-color-orange);
     border-color: var(--main-color-orange);
 }
-.btn-primary:hover {
-    background-color: var(--second-color-orange);
-    border-color: var(--second-color-orange);
-    }123123123
+
+    .btn-primary:hover {
+        background-color: var(--second-color-orange);
+        border-color: var(--second-color-orange);
+    }
 /*-------------------------------------------------------------*/
 /* CHECKBOXES */
 .form-check-input {
@@ -95,17 +102,20 @@ body {
     box-shadow: none !important;
     margin-bottom: 1rem;
 }
-.form-check-input:checked {
-    background-color: var(--second-color-orange) !important;
-    border-color: var(--second-color-orange);
-}
+
+    .form-check-input:checked {
+        background-color: var(--second-color-orange) !important;
+        border-color: var(--second-color-orange);
+    }
+
 .custom-control-input {
     background-color: var(--main-color-gray);
     border-color: var(--main-color-gray);
 }
-.custom-control-input:focus, .custom-control-label::before {
-    box-shadow: none !important;
-}
+
+    .custom-control-input:focus, .custom-control-label::before {
+        box-shadow: none !important;
+    }
 /*-------------------------------------------------------------*/
 /* ICONS */
 .bi {
@@ -115,5 +125,10 @@ body {
 /* ID */
 #main-logo-login-logout {
     margin-top: 10rem;
-    width: 35%;
+    width: 100%;
+}
+
+#forgot-password {
+    font-weight: 500;
+    color: var(--main-color-orange)
 }
