@@ -90,10 +90,10 @@ body {
     border-color: var(--main-color-orange);
 }
 
-    .btn-primary:hover {
+.btn-primary:hover {
         background-color: var(--second-color-orange);
         border-color: var(--second-color-orange);
-    }
+}
 /*-------------------------------------------------------------*/
 /* CHECKBOXES */
 .form-check-input {
@@ -103,19 +103,19 @@ body {
     margin-bottom: 1rem;
 }
 
-    .form-check-input:checked {
+.form-check-input:checked {
         background-color: var(--second-color-orange) !important;
         border-color: var(--second-color-orange);
-    }
+}
 
 .custom-control-input {
     background-color: var(--main-color-gray);
     border-color: var(--main-color-gray);
 }
 
-    .custom-control-input:focus, .custom-control-label::before {
+.custom-control-input:focus, .custom-control-label::before {
         box-shadow: none !important;
-    }
+}
 /*-------------------------------------------------------------*/
 /* ICONS */
 .bi {
