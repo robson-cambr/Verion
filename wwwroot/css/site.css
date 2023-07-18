@@ -2,7 +2,8 @@
     --main-color-orange: #F5A500;
     --second-color-orange: #F9B510;
     --main-color-grey: #EFEFEF;
-    --second-color-grey: #F5F5F5;
+    --second-color-grey: #4F4F4F;
+    --main-color-white: #FEFEFE;
 }
 
 html {
@@ -18,7 +19,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem var(--main-color-grey), 0 0 0 0.25rem var(--main-color-orange);
+    box-shadow: 0 0 0 0 var(--main-color-grey), 0 0 0 0 var(--main-color-orange);
 }
 
 body {
@@ -32,9 +33,13 @@ body {
 
 .active {
     background-color: var(--main-color-grey) !important;
-    border: none;
+    border: none !important;
     font-weight: bolder;
-    color: var(--main-color-orange);
+    color: var(--main-color-orange) !important;
+}
+
+.nav-tabs .nav-link {
+    border: none;
 }
 
 .card {
@@ -58,8 +63,8 @@ body {
     width: 50%;
 }
 .login-logout-card a.nav-link {
+    color: var(--second-color-grey);
     font-size: 1rem;
-    color: #495057;
     text-align: center;
     padding: 1rem;
 }
@@ -85,9 +90,10 @@ body {
 /*-------------------------------------------------------------*/
 /* CHECKBOXES */
 .form-check-input {
-    background-color: var(--main-color-orange) !important;
+    background-color: var(--main-color-white) !important;
     border: none;
     box-shadow: none !important;
+    margin-bottom: 1rem;
 }
 .form-check-input:checked {
     background-color: var(--second-color-orange) !important;
