@@ -20,24 +20,23 @@
                     <label asp-for="Input.Password" class="form-label"><i class="bi bi-lock-fill"></i></label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
-                <div class="custom-control custom-checkbox">
+                <div class=" justify-con custom-control custom-checkbox">
                     <label asp-for="Input.RememberMe" class="custom-control-label">
                         <input type="checkbox" class="form-check-input custom-control-input" asp-for="Input.RememberMe" />
                         @Html.DisplayNameFor(m => m.Input.RememberMe)
                     </label>
-
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>    
+                </div>
+                <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
                 <hr />
                 <div class="d-flex justify-content-between">
                     <p>
-                        <a id="forgot-password" class="text-decoration-none" asp-page="./ForgotPassword">Forgot your password?</a>
+                        <a id="forgot-password" class="text-decoration-none" asp-page="./ForgotPassword">Password Recovery</a>
                     </p>
                     <!--
                     <p>
                         <a id="resend-confirmation" class="text-decoration-none" asp-page="./ResendEmailConfirmation">Resend Email</a>
                     </p>
                     -->
-                </div>
                 </div>
             </form>
         </section>

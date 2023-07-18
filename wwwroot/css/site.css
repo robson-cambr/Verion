@@ -2,7 +2,8 @@
     --main-color-orange: #F5A500;
     --second-color-orange: #F9B510;
     --main-color-grey: #EFEFEF;
-    --second-color-grey: #F5F5F5;
+    --second-color-grey: #4F4F4F;
+    --main-color-white: #FEFEFE;
 }
 
 html {
@@ -18,7 +19,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem var(--main-color-grey), 0 0 0 0.25rem var(--main-color-orange);
+    box-shadow: 0 0 0 0 var(--main-color-grey), 0 0 0 0 var(--main-color-orange);
 }
 
 body {
@@ -26,54 +27,71 @@ body {
     margin-bottom: 60px;
     font-family: "Roboto", sans-serif;
 }
+
 .custom-div {
     background-color: var(--main-color-grey);
 }
 
 .active {
     background-color: var(--main-color-grey) !important;
-    border: none;
+    border: none !important;
     font-weight: bolder;
-    color: var(--main-color-orange);
+    color: var(--main-color-orange) !important;
+}
+
+.nav-tabs .nav-link {
+    border: none;
 }
 
 .card {
     border: none;
 }
+
 .card-header {
     margin-top: 2rem;
     border: none;
 }
 
 /*-------------------------------------------------------------*/
+
 /* LOGIN LOGOUT PAGE */
+
 .login-logout-card .card-header {
     padding: 0px 0px 12px 0px;
     border: none;
 }
+
 .login-logout-card ul.nav-tabs {
     margin: 0px 0px -12px 0px;
 }
+
 .login-logout-card li.nav-item {
     width: 50%;
 }
+
 .login-logout-card a.nav-link {
+    color: var(--second-color-grey);
     font-size: 1rem;
-    color: #495057;
     text-align: center;
     padding: 1rem;
 }
+
 .login-logout-card .card-body {
     padding: 10px 20px;
 }
+
 /*-------------------------------------------------------------*/
+
 /* FORMS */
+
 .form-control:focus {
     border-color: var(--main-color-orange);
     box-shadow: inset 0 0 0 var(--main-color-orange), 0 0 0 var(--main-color-orange);
 }
 /*-------------------------------------------------------------*/
+
 /* BUTTONS */
+
 .btn-primary {
     background-color: var(--main-color-orange);
     border-color: var(--main-color-orange);
@@ -82,12 +100,16 @@ body {
     background-color: var(--second-color-orange);
     border-color: var(--second-color-orange);
     }
+
 /*-------------------------------------------------------------*/
+
 /* CHECKBOXES */
+
 .form-check-input {
-    background-color: var(--main-color-orange) !important;
+    background-color: var(--main-color-white) !important;
     border: none;
     box-shadow: none !important;
+    margin-bottom: 1rem;
 }
 .form-check-input:checked {
     background-color: var(--second-color-orange) !important;
@@ -100,13 +122,18 @@ body {
 .custom-control-input:focus, .custom-control-label::before {
     box-shadow: none !important;
 }
+
 /*-------------------------------------------------------------*/
+
 /* ICONS */
 .bi {
     color: var(--main-color-orange);
 }
+
 /*-------------------------------------------------------------*/
+
 /* ID */
+
 #main-logo-login-logout {
     margin-top: 10rem;
     width: 100%;
@@ -114,5 +141,5 @@ body {
 
 #forgot-password {
     font-weight: 500;
-    color:var(--main-color-orange)
+    color: var(--main-color-orange)
 }
