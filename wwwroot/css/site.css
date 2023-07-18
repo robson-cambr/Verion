@@ -1,3 +1,7 @@
+:root {
+    --main-color-orange: #F5A500;
+}
+
 html {
     font-size: 14px;
     position: relative;
@@ -43,6 +47,11 @@ body {
     padding: 10px 20px;
 }
 
+.bi {
+    color: var(--main-color-orange);
+}
+
+/* ID */
 #main-logo-login-logout {
     margin-top: 10rem;
     width: 35%;
