@@ -9,14 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
-@* MAIN SCREEN*@
-<div id="main-login" class="row flex-column align-items-center vh-100">
-    @* LOGO *@
-    <div class="col-3 text-center">
+<body>
+<!-- MAIN PAGE -->
+<div id="main-login" class="row flex-column align-items-center">
+    <!-- LOGO -->
+    <div class="col-11 col-xl-3 col-md-7 col-sm-8 text-center">
         <img id="main-logo-login-logout" class="img-fluid" src="~/images/logo-verion.png">
     </div>
-    @* LOG IN AND REGISTER MENU *@
-    <div class="col-3">
+    <!-- LOG IN AND REGISTER MENU -->
+    <div class="col-11 col-xl-3 col-md-7 col-sm-8">
         <div class="card login-logout-card custom-div">
             <div class="card-header mb-3">
                 <ul class="nav nav-tabs card-header-tabs">
@@ -39,13 +40,15 @@
     </div>
 </div>
 
+
+<!-- SRC SCRIPTS -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 
-@* SCRIPTS *@
+<!-- SCRIPTS -->
 @section Scripts{
-
+    @* Jquery - Returns Actieve Member*@
     <script>
         $(function () {
             const currentPage = location.pathname;
@@ -60,3 +63,4 @@
 }
 
 @await RenderSectionAsync("Scripts", required: false)
+</body>

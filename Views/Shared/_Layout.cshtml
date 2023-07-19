@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <!-- MAIN HORIZONTAL MENU -->
     <header>
-        <!-- MAIN HORIZONTAL MENU -->
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="img-fluid" src="~/images/logo-verion-shared.png"></a>
@@ -34,6 +35,7 @@
             </div>
         </nav>
     </header>
+
     <!-- RENDER -->
     <div class="container">
         <main role="main" class="pb-3">
@@ -123,7 +125,6 @@
         </div>
     </footer>
 
-
     <!-- SRC SCRIPTS -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -131,5 +132,6 @@
 
     <!-- SCRIPTS -->
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

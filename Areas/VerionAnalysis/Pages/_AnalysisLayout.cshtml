@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Verion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Verion.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 analysis-container">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="img-fluid" src="~/images/logo-verion-shared.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial.cshtml" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SIDE MENU -->
+    <!-- VERION LOGO THAT OPENS SIDE MENU -->
+    <div class="side-bar">
+        <div class="menu">
+            <!-- DASHBOARD -->
+            <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
+            <!-- OPERATION -->
+            <div class="item">
+                <a class="sub-btn"><i class="fas fa-table" aria-hidden="true"></i>Operação<i class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="#" class="sub-item"><i class="fa fa-plus" aria-hidden="true"></i>Adicionar</a>
+                    <a href="#" class="sub-item"><i class="fa fa-minus" aria-hidden="true"></i>Remover</a>
+                    <a href="#" class="sub-item"><i class="fa fa-database" aria-hidden="true"></i>Histórico</a>
+                </div>
+            </div>
+            <!-- VEHICLES-->
+            <div class="item">
+                <a class="sub-btn"><i class="fas fa-tractor" aria-hidden="true"></i>Veículos<i class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="#" class="sub-item"><i class="fa fa-plus" aria-hidden="true"></i>Adicionar</a>
+                    <a href="#" class="sub-item"><i class="fa fa-minus" aria-hidden="true"></i>Remover</a>
+                    <a href="#" class="sub-item"><i class="fa fa-map-pin" aria-hidden="true"></i></i>Localizar</a>
+                </div>
+            </div>
+            <!-- FORM -->
+            <div class="item"><a href="#"><i class="fa fa-th-list" aria-hidden="true"></i>Relatório</a></div>
+            <!-- INFO -->
+            <div class="item"><a href="#"><i class="fas fa-info-circle"></i>Documentação</a></div>
+        </div>
+    </div>
+
+    <!-- RENDER -->
+    <div class="container-fluid analysis-container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+        @* JQuery - Toggle in Menus *@
+                $('.sub-btn').click(function () {
+                    $(this).next('.sub-menu').slideToggle();
+                    $(this).find('.dropdown').toggleClass('rotate');
+                });
+
+        @* JQuery - Expand/Collpase Sidebar *@
+                $('.menu-btn').click(function () {
+                    $('.side-bar').addClass('active');
+                    $('.menu-btn').css("visibility", "visible");
+                });
+
+            $('.close-btn').click(function () {
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css("visibility", "visible");
+            });
+        });
+    </script>
+
+</body>
+</html>

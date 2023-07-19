@@ -1,0 +1,146 @@
+﻿@page
+@model Verion.Areas.VerionApplication.Pages.SideMenu.TesteModel
+@{
+    ViewData["Title"] = "Application";
+    Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
+}
+
+
+<body style="background-color: #EFEFEF; max-height: 100vw;">
+    <main>
+        <div class="container-fluid">
+            <div class="row flex-column justify-content-center align-items-center overflow-y-auto">
+
+                <!-- MENU PLANEJAMENTO COL-->
+
+                <div id="planning-menu" class="col-3">
+                    <nav id="planning-nav" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Menu</a></li>
+                            <li class="breadcrumb-item"><a href="#">Operation</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Planning 1</li>
+                        </ol>
+                    </nav>
+                    <div class="planning-opt">
+                        <label for="safra">Safra:</label>
+                        <select name="safra" id="safra">
+                            <optgroup>
+                                <option value="1">1</option>
+                            </optgroup>
+                            <optgroup>
+                                <option value="2">2</option>
+                            </optgroup>
+                            <optgroup>
+                                <option value="3">3</option>
+                            </optgroup>
+                            <optgroup>
+                                <option value="4">4</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <!--TIPO DE APLICAÇÃO COL-->
+
+                <div id="application-type" class="col-3 my-2">
+                    <label for="application-type">Tipo de aplicação:</label>
+                    <select name="application-type" id="safra">
+                        <optgroup>
+                            <option value="adubacao">Adubação</option>
+                        </optgroup>
+                        <optgroup>
+                            <option value="adubacao">Adubação</option>
+                        </optgroup>
+                        <optgroup>
+                            <option value="adubacao">Adubação</option>
+                        </optgroup>
+                        <optgroup>
+                            <option value="adubacao">Adubação</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+
+                <!-- DASHBOARD COL-ROW -->
+
+                <div id="info-menu" class="col-8 mb-2">
+
+                    <div id="main-dashboard" class="row flex-column align-items-center">
+
+                        <!--MENU APLICAÇÃO COL-->
+
+                        <div class="col-4 w-100">
+                            <div class="d-flex align-items-center justify-content-between mx-5 p-2">
+                                <h2 class="">Adubação</h2>
+                                <a name="" id="" class="btn btn-primary" href="#" role="button">+ Novo </a>
+                            </div>
+                        </div>
+
+                        <!--MAIN DASHBOARD COL -->
+
+                        <div id="test" class="col-7 my-3">
+                        </div>
+
+                        <!--PAGINAÇÃO COL-->
+
+                        <div class="col">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination me-5 justify-content-end">
+                                    <li class="page-item disabled">
+                                        <a class="page-link">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+
+    <style>
+        #planning-menu,
+        #application-type,
+        #info-menu {
+            background-color: #FFFF;
+        }
+
+        #planning-menu {
+            width: 100%;
+            height: 5rem;
+        }
+
+
+        #application-type {
+            width: 95%;
+            height: 5rem;
+        }
+
+        #info-menu {
+            width: 95%;
+            height: 100%;
+        }
+
+
+        #dashboard {
+            height: 100%;
+        }
+
+        #test {
+            background-color: blue;
+            width: 90%;
+            height: 30rem;
+        }
+    </style>
+    </body>
