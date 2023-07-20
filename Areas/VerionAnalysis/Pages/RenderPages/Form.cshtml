@@ -1,4 +1,92 @@
 ﻿@page
-@model Verion.Areas.VerionAnalysis.Pages.RenderPages.FormModel
+@using Verion.Areas.VerionAnalysis.Pages.RenderPages;
+@model FormModel
 @{
+	ViewData["Title"] = "Application";
+	Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
+
+
+<div class="container-fluid h-100">
+
+	<!-- PAGE CONTENT-->
+
+	<div class="row row-cols-1 h-100 w-100">
+
+		<div id="operation" class="col-5 bg-white p-0 w-100">
+			<div class="row row-cols-1">
+				<div class="col">
+
+					<!--PLAINNIGN SELECT LIST-->
+
+					<div id="painning-select-list" class="d-flex p-3 border-bottom">
+					<label class="me-2" for="safra">Safra:</label>
+					<select class="form-select w-25" aria-label=".form-select-lg" name="safra" id="safra">
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+					</div>
+
+				</div>
+			
+				<!-- OPERATION DATA -->
+				
+				<div id="data-operation" class="col text-center">
+					<h2>OPERATION DATA</h2>
+				</div>
+			</div>
+		</div>
+
+				<!--OPERATION INFOS-->
+
+		<div id="operation-info" class="col-2 my-2">
+			<div class="d-flex justify-content-center w-100 h-100">
+				<div class="bg-white mx-2">COL</div>
+				<div class="bg-white mx-2">COL</div>
+				<div class="bg-white mx-2">COL</div>
+				<div class="bg-white mx-2">COL</div>
+				<div class="bg-white mx-2">COL</div>
+			</div>
+		</div>
+
+		<!--DASHBOARD IDENTITY-->
+
+		<div id="dashboard-identity" class="col-5 bg-white my-2 w-100 border text-center">
+			<h2>IDENTITY</h2>
+		</div>
+
+	</div>
+</div>
+
+
+<!-- ----- Bootstrap 5.2.0 Js Link Added ----- -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+<style>
+
+	#operation,
+	#operation-infos,
+	#dashboard-identity {
+		background-color: #FFFF;
+		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3)
+	}
+
+	#data-operation {
+		height: 28rem;
+	}
+
+
+	#operation-info {
+		height: 12rem;
+	}
+
+	#dashboard-identity {
+		height: 28rem;
+	}
+
+</style>

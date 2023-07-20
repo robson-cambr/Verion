@@ -1,4 +1,35 @@
 ﻿@page
-@model Verion.Areas.VerionAnalysis.Pages.RenderPages.VehiclesModel
+@using Verion.Areas.VerionAnalysis.Pages.RenderPages;
+@model OperationModel
 @{
+	ViewData["Title"] = "Application";
+	Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
+
+<div class="container-fluid">
+	<div class="row row-cols-1 vh-100">
+		<div class="col bg-white mb-1">
+				<button type="button" class="btn btn-secondary">Secondary</button>
+				<button type="button" class="btn btn-secondary">Secondary</button>
+				<button type="button" class="btn btn-secondary">Secondary</button>
+				<button type="button" class="btn btn-secondary">Secondary</button>
+		</div>
+
+		<!--MAP VEHICLES-->
+		<div id="map-vehicles" class="col bg-success">
+			<h2>MAP</h2>
+		</div>
+	</div>
+</div>
+
+<style>
+
+	#nav-vehicles {
+		height: 10%;
+	}
+
+	#map-vehicles {
+		height: 90%;
+	}
+
+</style>

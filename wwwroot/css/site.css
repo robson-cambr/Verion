@@ -366,3 +366,10 @@ ul.pagination {
         ul.pagination li a:hover {
             color: var(--main-color-green);
         }
+
+#planning-menu,
+#application-type,
+#info-menu {
+    background-color: #FFFF;
+    box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3)
+}
