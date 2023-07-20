@@ -10,45 +10,44 @@
 </head>
 
 <body>
-<!-- MAIN PAGE -->
-<div id="main-login" class="row flex-column align-items-center">
-    <!-- LOGO -->
-    <div class="col-11 col-xl-3 col-md-7 col-sm-8 text-center">
-        <img id="main-logo-login-logout" class="img-fluid" src="~/images/logo-verion.png">
-    </div>
-    <!-- LOG IN AND REGISTER MENU -->
-    <div class="col-11 col-xl-3 col-md-7 col-sm-8">
-        <div class="card login-logout-card custom-div">
-            <div class="card-header mb-3">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Identity/Account/Login">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Identity/Account/Register">Register</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body">
-                <div class="row justify-content-center">
-                    <div class="">
-                        @RenderBody()
+    <!-- MAIN PAGE -->
+    <div id="main-login" class="row flex-column align-items-center">
+        <!-- LOGO -->
+        <div class="col-11 col-xl-3 col-md-7 col-sm-8 text-center">
+            <img id="main-logo-login-logout" class="img-fluid" src="~/images/logo-verion.png">
+        </div>
+        <!-- LOG IN AND REGISTER MENU -->
+        <div class="col-11 col-xl-3 col-md-7 col-sm-8">
+            <div class="card login-logout-card custom-div">
+                <div class="card-header mb-3">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Identity/Account/Login">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Identity/Account/Register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div class="">
+                            @RenderBody()
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<!-- SRC SCRIPTS -->
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- SRC SCRIPTS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 
-<!-- SCRIPTS -->
-@section Scripts{
-    @* Jquery - Returns Actieve Member*@
+    <!-- SCRIPTS -->
+    @* JavaScript - Returns Actieve Member *@
     <script>
         $(function () {
             const currentPage = location.pathname;
@@ -60,7 +59,5 @@
             })
         })
     </script>
-}
-
-@await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
