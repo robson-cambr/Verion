@@ -314,24 +314,56 @@ nav-link:active {
 
 /* Verion Analysis Renders */
 
-.page-link-analysis {
-    color: var(--main-color-green);
+ul.pagination {
+    position: relative;
+    background-color: var(--main-color-black);
+    display: flex;
+    padding: 1rem;
+    border-radius: 1rem;
     box-shadow: var(--box-shadow);
-    line-height: 50px;
-    text-align: center;
+    justify-content: center;
 }
 
-    .page-link-analysis:hover {
-        background-color: var(--main-color-green);
-        color: var(--main-color-white);
-        box-shadow: var(--box-shadow);
+    ul.pagination li {
+        list-style: none;
+        line-height: 3.5rem;
+        margin: 0 5px;
+        
     }
 
+        ul.pagination li.page-number {
+            width: 3.5rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            text-align: center;
 
+        }
 
-ul li.page-link-analysis:hover a,
-ul li.page-link-analysis:active {
-    background-color: var(--main-color-green);
-    color: var(--main-color-white);
-    box-shadow: var(--box-shadow);
-}
+        ul.pagination li a {
+            display: block;
+            text-decoration: none;
+            color: var(--main-color-grey);
+            font-weight: 600;
+            border-radius: 10%;
+        }
+
+        ul.pagination li.page-number:hover a,
+        ul.pagination li.page-number.active a {
+            background: var(--main-color-green);
+            color: var(--main-color-white);
+        }
+
+        ul.pagination li:first-child {
+            margin-left: 30px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        ul.pagination li:last-child {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        ul.pagination li a:hover {
+            color: var(--main-color-green);
+        }
