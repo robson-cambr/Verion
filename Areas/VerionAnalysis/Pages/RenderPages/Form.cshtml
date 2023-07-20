@@ -19,7 +19,7 @@
 
 					<!--PLAINNIGN SELECT LIST-->
 
-					<div id="painning-select-list" class="d-flex p-3 border-bottom">
+					<div id="painning-select-list" class="d-flex p-3 border-bottom align-items-center">
 					<label class="me-2" for="safra">Safra:</label>
 					<select class="form-select w-25" aria-label=".form-select-lg" name="safra" id="safra">
 						<option value="1" selected>1</option>
@@ -41,13 +41,13 @@
 
 				<!--OPERATION INFOS-->
 
-		<div id="operation-info" class="col-2 my-2">
-			<div class="d-flex justify-content-center w-100 h-100">
-				<div class="bg-white mx-2">COL</div>
-				<div class="bg-white mx-2">COL</div>
-				<div class="bg-white mx-2">COL</div>
-				<div class="bg-white mx-2">COL</div>
-				<div class="bg-white mx-2">COL</div>
+		<div id="operation-info" class="col-2 p-0 my-3 w-100">
+			<div class="d-flex h-100">
+				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
+				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
+				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
+				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
+				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
 			</div>
 		</div>
 
@@ -70,10 +70,13 @@
 <style>
 
 	#operation,
-	#operation-infos,
 	#dashboard-identity {
 		background-color: #FFFF;
-		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3)
+		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
+	}
+
+	.operation-info-shadow {
+		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
 	}
 
 	#data-operation {
