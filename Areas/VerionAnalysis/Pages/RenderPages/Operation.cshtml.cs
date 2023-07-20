@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Verion.Areas.VerionAnalysis.Pages.SideMenu
+namespace Verion.Areas.VerionAnalysis.Pages.RenderPages
 {
-    public class TesteModel : PageModel
+    public class OperationModel : PageModel
     {
         public void OnGet()
         {

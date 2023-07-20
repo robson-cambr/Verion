@@ -1,5 +1,6 @@
 ﻿@page
-@model Verion.Areas.VerionAnalysis.Pages.SideMenu.TesteModel
+@using Verion.Areas.VerionAnalysis.Pages.RenderPages;
+@model OperationModel
 @{
     ViewData["Title"] = "Application";
     Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
@@ -67,7 +68,7 @@
 
                         <!--MENU APLICAÇÃO COL-->
 
-                        <div class="col-4 w-100">
+                        <div class="col-3 w-100">
                             <div class="d-flex align-items-center justify-content-between mx-5 p-2">
                                 <h2 class="">Adubação</h2>
                                 <a name="" id="" class="btn btn-primary" href="#" role="button">+ Novo </a>
@@ -80,7 +81,7 @@
                         </div>
 
                         <!--PAGINAÇÃO COL-->
-
+                        <div class="col-3 w-50">
                         <ul class="pagination">
                             <li>
                                 <a class="prev" href="#" aria-label="Previous">
@@ -101,6 +102,7 @@
                                 </a>
                             </li>
                         </ul>
+                        </div>
                     </div>
                 </div>
             </div>
