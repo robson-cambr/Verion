@@ -5,8 +5,10 @@
     --main-color-grey: #EFEFEF;
     --second-color-grey: #4F4F4F;
     --main-color-white: #FEFEFE;
-    --main-color-black: #262626;
+    --main-color-black: #323232;
     --main-color-font: #111111;
+    --main-color-red: #E10923;
+    --main-color-green: #027F79;
     --second-color-font: #EFEFEF;
     --main-font: "Roboto", sans-serif;
     --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
@@ -45,7 +47,7 @@ h1, h2, h3, h4, h5, h6,
     color: var(--main-color-font);
 }
 
-/* LINKS */
+    /* LINKS */
     h1 a {
         text-decoration: none;
         color: var(--main-color-font);
@@ -218,7 +220,7 @@ nav-link:active {
 }
 
 
-/* AREAS/VERIONAPPLICATION/_VERIONAPPLICATIONLAYOUT */
+/* Verion Analysis Menu */
 
 .side-bar {
     background: var(--main-color-black);
@@ -308,4 +310,28 @@ nav-link:active {
 
 .analysis-container {
     padding-left: 16%;
+}
+
+/* Verion Analysis Renders */
+
+.page-link-analysis {
+    color: var(--main-color-green);
+    box-shadow: var(--box-shadow);
+    line-height: 50px;
+    text-align: center;
+}
+
+    .page-link-analysis:hover {
+        background-color: var(--main-color-green);
+        color: var(--main-color-white);
+        box-shadow: var(--box-shadow);
+    }
+
+
+
+ul li.page-link-analysis:hover a,
+ul li.page-link-analysis:active {
+    background-color: var(--main-color-green);
+    color: var(--main-color-white);
+    box-shadow: var(--box-shadow);
 }
