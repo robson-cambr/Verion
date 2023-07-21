@@ -75,6 +75,7 @@ body {
     line-height: 1.5;
     text-align: left;
     font-size: 16px;
+    max-height: 100vw;
 }
 
 .hold-transition .content-wrapper,
