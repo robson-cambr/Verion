@@ -20,106 +20,112 @@
 
 </head>
 <body>
-
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
-            <div class="container-fluid analysis-container">
-                <!-- logo -->
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img class="img-fluid" src="~/images/verion-analysis.png">
-                </a> <!-- logo />-->
-                <!-- burguer -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> <!-- burguer /> -->
-
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-
-                    <!-- search bar -->
-                    <div class="input-box">
-                        <input type="text" class="search-box" placeholder="Search...">
-                        <span class="icon">
-                            <i class="fas fa-search search-icon"></i>
-                        </span>
-                        <i class="fas fa-times close-icon"></i>
-                    </div> <!-- search bar /> -->
-                    <!-- user -->
-                    <img class="user-picture-menu" src="~/images/profile-user-sq.png" onclick="toggleMenu()" />
-                    <!-- user menu wrapper -->
-                    <div id="user-menu" class="user-menu-wrap">
-                        <!-- user menu -->
-                        <div class="user-menu">
-                            <div class="user-menu-info">
-                                <img class="user-picture-menu" src="~/images/profile-user-sq.png" />
-                                <h5>Your Name Here</h5>
-                            </div>
-                            <hr />
-                            <a class="user-menu-links" href="#">
-                                <i class="custom-i fa fa-user" aria-hidden="true"></i><span>Editar Perfil</span>
-                                <i class="fas fa-angle-right dropdown"></i>
-                            </a>
-                            <a class="user-menu-links" href="#">
-                                <i class="custom-i fa fa-cog" aria-hidden="true"></i><span>Configurações</span>
-                                <i class="fas fa-angle-right dropdown"></i>
-                            </a>
-                            <a class="user-menu-links" href="#">
-                                <i class="custom-i fas fa-question" aria-hidden="true"></i><span>Suporte</span>
-                                <i class="fas fa-angle-right dropdown"></i>
-                            </a>
-                            <a class="user-menu-links" href="#">
-                                <i class="custom-i fas fa-sign-out-alt"></i><span>Logout</span>
-                                <i class="fas fa-angle-right dropdown"></i>
-                            </a>
-                        </div><!-- user settings /> -->
-                    </div> <!-- user settings wrapper /> -->
-
-                    <!-- notification btn -->
-                    <button type="button" class="icon-button">
-                        <i class="fas fa-bell notification-icon" aria-hidden="true"></i>
-                        <span class="icon-button__badge">2</span> <!-- notification counter -->
-                    </button> <!-- notification btn /> -->
-
+    <div class="row p-0">
+        <div class="col-2 p-0">
+            <!-- side menu -->
+            <div class="side-bar">
+                <div class="menu">
+                    <!-- dashboard -->
+                    <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div> <!-- dashboard /> -->
+                    <!-- operation -->
+                    <div class="item">
+                        <a class="sub-btn"><i class="fas fa-table" aria-hidden="true"></i>Operação<i class="fas fa-angle-right dropdown"></i></a>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-item"><i class="fa fa-plus" aria-hidden="true"></i>Adicionar</a>
+                            <a href="#" class="sub-item"><i class="fa fa-minus" aria-hidden="true"></i>Remover</a>
+                            <a href="#" class="sub-item"><i class="fa fa-database" aria-hidden="true"></i>Histórico</a>
+                        </div>
+                    </div> <!-- operation /> -->
+                    <!-- vehicles -->
+                    <div class="item">
+                        <a class="sub-btn"><i class="fas fa-tractor" aria-hidden="true"></i>Veículos<i class="fas fa-angle-right dropdown"></i></a>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-item"><i class="fa fa-plus" aria-hidden="true"></i>Adicionar</a>     <!-- add -->
+                            <a href="#" class="sub-item"><i class="fa fa-minus" aria-hidden="true"></i>Remover</a>      <!-- remove -->
+                            <a href="#" class="sub-item"><i class="fa fa-map-pin" aria-hidden="true"></i>Localizar</a>  <!-- track -->
+                        </div>
+                    </div>  <!-- vehicles /> -->
+                    <!-- form -->
+                    <div class="item"><a href="#"><i class="fa fa-th-list" aria-hidden="true"></i>Relatório</a></div>   <!-- form /> -->
+                    <!-- documentation -->
+                    <div class="item"><a href="#"><i class="fas fa-info-circle"></i>Documentação</a></div>  <!-- documentation /> -->
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- side menu -->
-    <div class="side-bar">
-        <div class="menu">
-            <!-- dashboard -->
-            <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div> <!-- dashboard /> -->
-            <!-- operation -->
-            <div class="item">
-                <a class="sub-btn"><i class="fas fa-table" aria-hidden="true"></i>Operação<i class="fas fa-angle-right dropdown"></i></a>
-                <div class="sub-menu">
-                    <a href="#" class="sub-item"><i class="fa fa-plus" aria-hidden="true"></i>Adicionar</a>
-                    <a href="#" class="sub-item"><i class="fa fa-minus" aria-hidden="true"></i>Remover</a>
-                    <a href="#" class="sub-item"><i class="fa fa-database" aria-hidden="true"></i>Histórico</a>
-                </div>
-            </div> <!-- operation /> -->
-            <!-- vehicles -->
-            <div class="item">
-                <a class="sub-btn"><i class="fas fa-tractor" aria-hidden="true"></i>Veículos<i class="fas fa-angle-right dropdown"></i></a>
-                <div class="sub-menu">
-                    <a href="#" class="sub-item"><i class="fa fa-plus" aria-hidden="true"></i>Adicionar</a>     <!-- add -->
-                    <a href="#" class="sub-item"><i class="fa fa-minus" aria-hidden="true"></i>Remover</a>      <!-- remove -->
-                    <a href="#" class="sub-item"><i class="fa fa-map-pin" aria-hidden="true"></i>Localizar</a>  <!-- track -->
-                </div>
-            </div>  <!-- vehicles /> -->
-            <!-- form -->
-            <div class="item"><a href="#"><i class="fa fa-th-list" aria-hidden="true"></i>Relatório</a></div>   <!-- form /> -->
-            <!-- documentation -->
-            <div class="item"><a href="#"><i class="fas fa-info-circle"></i>Documentação</a></div>  <!-- documentation /> -->
+            </div> <!-- side menu /> -->
         </div>
-    </div> <!-- side menu /> -->
-    <!-- render -->
-    <div class="container-fluid analysis-container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div> <!-- render /> -->
+        <div class="col-10 p-0">
+            <header class="main-menu">
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+                    <div class="container-fluid">
+                        <!-- logo -->
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img class="img-fluid" src="~/images/verion-analysis.png">
+                        </a> <!-- logo />-->
+                        <!-- burguer -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> <!-- burguer /> -->
+
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+
+                            <!-- search bar -->
+                            <div class="input-box">
+                                <input type="text" class="search-box" placeholder="Search...">
+                                <span class="icon">
+                                    <i class="fas fa-search search-icon"></i>
+                                </span>
+                                <i class="fas fa-times close-icon"></i>
+                            </div> <!-- search bar /> -->
+                            <!-- user -->
+                            <img class="user-picture-menu" src="~/images/profile-user-sq.png" onclick="toggleMenu()" />
+                            <!-- user menu wrapper -->
+                            <div id="user-menu" class="user-menu-wrap">
+                                <!-- user menu -->
+                                <div class="user-menu">
+                                    <div class="user-menu-info">
+                                        <img class="user-picture-menu" src="~/images/profile-user-sq.png" />
+                                        <h5>Your Name Here</h5>
+                                    </div>
+                                    <hr />
+                                    <a class="user-menu-links" href="#">
+                                        <i class="custom-i fa fa-user" aria-hidden="true"></i><span>Editar Perfil</span>
+                                        <i class="fas fa-angle-right dropdown"></i>
+                                    </a>
+                                    <a class="user-menu-links" href="#">
+                                        <i class="custom-i fa fa-cog" aria-hidden="true"></i><span>Configurações</span>
+                                        <i class="fas fa-angle-right dropdown"></i>
+                                    </a>
+                                    <a class="user-menu-links" href="#">
+                                        <i class="custom-i fas fa-question" aria-hidden="true"></i><span>Suporte</span>
+                                        <i class="fas fa-angle-right dropdown"></i>
+                                    </a>
+                                    <a class="user-menu-links" href="#">
+                                        <i class="custom-i fas fa-sign-out-alt"></i><span>Logout</span>
+                                        <i class="fas fa-angle-right dropdown"></i>
+                                    </a>
+                                </div><!-- user settings /> -->
+                            </div> <!-- user settings wrapper /> -->
+                            <!-- notification btn -->
+                            <button type="button" class="icon-button">
+                                <i class="fas fa-bell notification-icon" aria-hidden="true"></i>
+                                <span class="icon-button__badge">2</span> <!-- notification counter -->
+                            </button> <!-- notification btn /> -->
+
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- render -->
+            <div class="container-fluid rendered-page">
+                <main role="main" class="">
+                    @RenderBody()
+                </main>
+            </div> <!-- render /> -->
+        </div>
+    </div>
+
+
     <!-- Src Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
 
@@ -127,7 +133,7 @@
     <script type="text/javascript">
         @* Javascript - Expand/Collapse User Menu *@
             let userMenu = document.getElementById("user-menu")
-            function toggleMenu() {
+        function toggleMenu() {
             userMenu.classList.toggle("open-menu");
         }
 
@@ -154,7 +160,7 @@
             let inputBox = document.querySelector(".input-box"),
                 searchIcon = document.querySelector(".icon"),
                 closeIcon = document.querySelector(".close-icon");
-                searchBox = document.querySelector(".search-box");
+        searchBox = document.querySelector(".search-box");
 
         searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
         searchIcon.addEventListener("click", () => inputBox.classList.add("active"));
