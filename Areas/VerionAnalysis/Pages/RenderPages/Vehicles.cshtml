@@ -6,27 +6,32 @@
 	Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
 
-<div class="container-fluid">
-	<div class="row row-cols-1 align-content-center vh-100">
-		<div class="col p-0">
-			<div class="d-flex justify-content-end p-4 bg-white">
-				<button type="button" class="btn btn-secondary me-2">Message</button>
-				<button type="button" class="btn btn-secondary me-2">Statistics</button>
-				<button type="button" class="btn btn-secondary me-2">Researches</button>
-				<button type="button" class="btn btn-secondary me-2">Track</button>
-				<button type="button" class="btn btn-secondary me-2">Alarms</button>
+<div class="container">
+	<div id="vehicles-row" class="row row-cols-1 align-content-center">
+		<!-- NAV BUTTON -->
+		<div id="map-nav-buttons" class="col border-bottom">
+			<div class="d-flex justify-content-end p-4">
+				<button type="button" class="btn btn-secondary me-2 shadow-sm">Message</button>
+				<button type="button" class="btn btn-secondary me-2 shadow-sm">Statistics</button>
+				<button type="button" class="btn btn-secondary me-2 shadow-sm">Researches</button>
+				<button type="button" class="btn btn-secondary me-2 shadow-sm">Track</button>
+				<button type="button" class="btn btn-secondary me-2 shadow-sm">Alarms</button>
 			</div>
 
 		</div>
-
 		<!--MAP VEHICLES-->
-		<div id="map-vehicles" class="col bg-success">
-			<h2>MAP</h2>
+		<div id="map-vehicles" class="col p-0">
+			<img src="~/images/map-test.png" width="100%" alt="Minha Figura">
 		</div>
 	</div>
 </div>
 
 <style>
+
+	#vehicles-row {
+		background-color: #FFFF;
+		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
+	}
 
 	#nav-vehicles {
 		height: 10%;
@@ -34,6 +39,10 @@
 
 	#map-vehicles {
 		height: 90%;
+	}
+
+	.map-test {
+		background-image: url('~/wwwroot/images/map-test.png');
 	}
 
 </style>
