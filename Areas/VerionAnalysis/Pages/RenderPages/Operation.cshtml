@@ -66,8 +66,8 @@
 
 				<!--MENU APLICAÇÃO COL-->
 
-				<div class="col-2 w-100">
-					<div class="d-flex align-items-center justify-content-between mx-5 my-5 p-2">
+				<div class="col">
+					<div class="d-flex align-items-center justify-content-between mx-3 my-3 p-2">
 						<h2 class="text-center m-0">Adubação</h2>
 						<a name="" id="" class="btn btn-primary" href="#" role="button">+ Novo </a>
 					</div>
@@ -75,15 +75,15 @@
 
 				<!--MAIN TABLE -->
 
-				<div class="col-8 w-75 my-3">
-					<table class="table table-md table-hover">
-						<thead class="table-light">
+				<div class="col px-3">
+					<table class="table table-md table-bordered table-hover">
+						<thead id="main-table" class="table-light">
 							<tr>
 								<th scope="col">Trabalho</th>
-								<th scope="col">Description</th>
-								<th scope="col">Hour</th>
-								<th scope="col">Status</th>
-								<th scope="col">Last Access</th>
+								<th scope="col" class="w-25">Description</th>
+								<th scope="col">Hour <img src="~/images/filter-top-bottom.svg" /></th>
+								<th scope="col">Status <img src="~/images/filter-top-bottom.svg" /></th>
+								<th scope="col">Last Access <img src="~/images/filter-top-bottom.svg" /></th>
 								<th scope="col">Alarms</th>
 							</tr>
 						</thead>
@@ -94,7 +94,7 @@
 								<td>4</td>
 								<td>Online</td>
 								<td>2021-02-05 08:28:36</td>
-								<td>01 Subscription Alert</td>
+								<td><a href="#">01 Subscription Alert</a></td>
 							</tr>
 							<tr>
 								<th scope="row"><a href="#">Trabalho 2</a></th>
@@ -102,7 +102,7 @@
 								<td>4</td>
 								<td>Online</td>
 								<td>2021-02-05 08:28:36</td>
-								<td>01 Subscription Alert</td>
+								<td><a href="#">01 Subscription Alert</a></td>
 							</tr>
 							<tr>
 								<th scope="row"><a href="#">Trabalho 3</a></th>
@@ -110,7 +110,7 @@
 								<td>4</td>
 								<td>Online</td>
 								<td>2021-02-05 08:28:36</td>
-								<td>01 Subscription Alert</td>
+								<td><a href="#">01 Subscription Alert</a></td>
 							</tr>
 							<tr>
 								<th scope="row"><a href="#">Trabalho 4</a></th>
@@ -118,7 +118,7 @@
 								<td>4</td>
 								<td>Online</td>
 								<td>2021-02-05 08:28:36</td>
-								<td>01 Subscription Alert</td>
+								<td><a href="#">01 Subscription Alert</a></td>
 							</tr>
 							<tr>
 								<th scope="row"><a href="#">Trabalho 5</a></th>
@@ -126,7 +126,7 @@
 								<td>4</td>
 								<td>Online</td>
 								<td>2021-02-05 08:28:36</td>
-								<td>01 Subscription Alert</td>
+								<td><a href="#">01 Subscription Alert</a></td>
 							</tr>
 							<tr>
 								<th scope="row"><a href="#">Trabalho 6</a></th>
@@ -134,7 +134,7 @@
 								<td>4</td>
 								<td>Online</td>
 								<td>2021-02-05 08:28:36</td>
-								<td>01 Subscription Alert</td>
+								<td><a href="#">01 Subscription Alert</a></td>
 							</tr>
 							<tr>
 								<th scope="row"><a href="#">Trabalho 7</a></th>
@@ -142,12 +142,11 @@
 								<td>4</td>
 								<td>Online</td>
 								<td>2021-02-05 08:28:36</td>
-								<td>01 Subscription Alert</td>
+								<td><a href="#">01 Subscription Alert</a></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-
 				<!--PAGINAÇÃO COL-->
 				<div class="col-2 text-center">
 					<ul class="pagination text-center">
@@ -245,10 +244,6 @@
 
 	#dashboard {
 		height: 100%;
-	}
-
-	#test {
-		width: 90%;
 	}
 
 </style>
