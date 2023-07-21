@@ -319,25 +319,24 @@ nav-link:active {
 
 .navbar-brand {
     width: 200px;
-    height: 55px;
-    align-items: center;
-    justify-content: center;
 }
 
 .user-picture-menu {
     width: 55px;
     height: 55px;
     cursor: pointer;
+    border-radius: 6px;
+    margin: 0 10px;
 }
 
 .user-menu-wrap {
     position: absolute;
     top: 100%;
-    right: 10%;
+    right: 0%;
     width: 320px;
     max-height: 0px;
     overflow: hidden;
-    transition: max-height 0.6s;
+    transition: max-height .9s;
 }
 
     .user-menu-wrap.open-menu {
@@ -381,12 +380,12 @@ nav-link:active {
     .user-menu-links .custom-i {
         width: 35px;
         padding: 8px;
-        background: var(--std-grey);
+        background: transparent;
         margin-right: 15px;
     }
 
     .user-menu-links i {
-        transition: transform 0.6s;
+        transition: transform .9s;
     }
 
     .user-menu-links:hover i {
@@ -413,6 +412,7 @@ nav-link:active {
     border: none;
     outline: none;
     border-radius: 6px;
+    margin: 0 10px;
 }
 
     .icon-button:hover {
@@ -440,7 +440,7 @@ nav-link:active {
     width: 100%;
     margin: 0 10px;
     background-color: var(--std-white);
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.6s cubic-bezier(0.18, -0.15, 0.165, 0.15);
     border: none;
     outline: none;
     border-radius: 6px;
