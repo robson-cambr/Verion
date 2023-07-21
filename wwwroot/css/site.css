@@ -1,4 +1,4 @@
-/* .CSS Variables */
+/*! .CSS Variables */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -21,7 +21,7 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
-    /* Standard Colors Variables for Current Application */
+    /*! Standard Colors Variables for Current Application */
     --std-orange: #F5A500;
     --alt-orange: #F9B510;
     --std-grey: #EFEFEF;
@@ -35,7 +35,7 @@
     --font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
-    /* @media-query Variables */
+    /*! @media-query Variables */
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -44,8 +44,8 @@
 }
 
 
-/* Shared _Layout*/
-/* @media-query */
+/*! Shared _Layout*/
+/*! @media-query */
 @media (min-width: 768px) {
     html {
         font-size: 16px;
@@ -145,13 +145,13 @@ a {
             text-decoration: none;
         }
 
-/* Form */
+/*! Form */
 .form-control:focus {
     border-color: var(--std-orange);
     box-shadow: inset 0 0 0 var(--std-orange), 0 0 0 var(--std-orange);
 }
 
-/* Button */
+/*! Button */
 .btn-primary {
     background-color: var(--std-orange);
     border-color: var(--std-orange);
@@ -162,7 +162,7 @@ a {
         border-color: var(--alt-orange);
     }
 
-/* Checkbox */
+/*! Checkbox */
 .form-check-input {
     background-color: var(--std-white) !important;
     border: none;
@@ -185,7 +185,7 @@ a {
     }
 
 
-/* Footer */
+/*! Footer */
 footer {
     padding-top: 120px;
 }
@@ -288,12 +288,12 @@ nav-link:active {
     padding: 1em;
 }
 
-.login-logout-card a.nav-link:active {
-    color: var(--std-grey);
-    font-size: 1em;
-    text-align: center;
-    padding: 1em;
-}
+    .login-logout-card a.nav-link:active {
+        color: var(--std-grey);
+        font-size: 1em;
+        text-align: center;
+        padding: 1em;
+    }
 
 .login-logout-card .card-body {
     padding: 10px 20px;
@@ -303,20 +303,101 @@ nav-link:active {
     background: var(--std-black);
 }
 
-.card-header-tabs a {
-    background: var(--std-white);
-}
+    .card-header-tabs a {
+        background: var(--std-white);
+    }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     background: var(--std-orange);
     color: var(--std-white);
     border: none;
 }
-/*! _AuthLayout /> */
-
 
 /*! <_VerionAnalysisLayout> */
-    /* <nav-bar menu> */
+/*! <nav-bar menu> */
+
+.navbar-brand {
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-picture-menu {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.user-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.6s;
+}
+
+.user-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.user-menu {
+    background: var(--std-white);
+    padding: 20px;
+    margin: 10px;
+}
+
+.user-menu-info {
+    display: flex;
+    align-items: center;
+}
+
+    .user-menu-info h5 {
+        font-weight: 600;
+    }
+
+    .user-menu-info .user-picture-menu {
+        width: 55px;
+        margin-right: 15px;
+    }
+
+.user-menu-links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--std-black);
+    margin: 12px auto;
+}
+
+    .user-menu-links span {
+        width: 100%;
+        transition: transform 0.6s;
+    }
+
+    .user-menu-links .custom-i {
+        width: 35px;
+        padding: 8px;
+        background: var(--std-grey);
+        margin-right: 15px;
+    }
+
+    .user-menu-links i {
+        transition: transform 0.6s;
+    }
+
+    .user-menu-links:hover i {
+        transform: translateX(5px);
+    }
+
+    .user-menu-links:hover span {
+        transform: translateX(5px);
+    }
+
+    .user-menu-links:hover span {
+        font-weight: 600;
+    }
 
 .icon-button {
     position: relative;
@@ -331,18 +412,15 @@ nav-link:active {
     outline: none;
     border-radius: 6px;
 }
-.icon-button:hover {
-    cursor: pointer;
-}
 
-    /*.icon-button:active {
-        background: var(--alt-grey);
-    }*/
+    .icon-button:hover {
+        cursor: pointer;
+    }
 
 .icon-button__badge {
     position: absolute;
     top: -10px;
-    right: -5px;
+    right: -5Px;
     width: 25px;
     height: 25px;
     background: var(--std-red);
@@ -353,16 +431,17 @@ nav-link:active {
     border-radius: 50%;
 }
 
-/*///////////////*/
 .input-box {
     position: relative;
     height: 55px;
     max-width: 55px;
     width: 100%;
     margin: 0 10px;
-    border-radius: 6px;
     background-color: var(--std-white);
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: none;
+    outline: none;
+    border-radius: 6px;
 }
 
     .input-box.open {
@@ -387,16 +466,16 @@ nav-link:active {
         background-color: var(--std-grey);
     }
 
-    .input-box.open {
-        padding: 0 15px 0 65px;
-    }
+.input-box.open {
+    padding: 0 15px 0 65px;
+}
 
 .icon {
     position: absolute;
     height: 100%;
     top: 0;
     left: 0;
-    width: 50px;
+    width: 55px;
     border-radius: 6px;
     display: flex;
     justify-content: center;
@@ -406,7 +485,6 @@ nav-link:active {
 
 .search-icon,
 .close-icon {
-
     position: absolute;
     top: 50%;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -423,9 +501,8 @@ nav-link:active {
 }
 
 .close-icon {
-    right: -20px;
+    right: 40px;
     color: var(--alt-grey);
-    padding: 5px;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-50%);
@@ -437,7 +514,7 @@ nav-link:active {
     transform: translateY(-50%) rotate(180deg);
 }
 
-    /*! <side menu> */
+/*! <side menu> */
 
 .side-bar {
     background: var(--std-black);
@@ -527,9 +604,8 @@ nav-link:active {
 .analysis-container {
     padding-left: 16%;
 }
-    /*! <side menu /> */
 
-    /*! <navigation bars> */
+/*! <navigation bars> */
 ul.pagination {
     position: relative;
     background-color: var(--std-black);
@@ -583,4 +659,3 @@ ul.pagination {
         ul.pagination li a:hover {
             color: var(--std-green);
         }
-    /*! <navigation bars /> */
