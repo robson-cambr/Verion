@@ -2,20 +2,25 @@
 @using Verion.Areas.VerionAnalysis.Pages.RenderPages;
 @model OperationModel
 @{
-	ViewData["Title"] = "Application";
-	Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
+    ViewData["Title"] = "Application";
+    Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
 
 
 <div class="container-fluid">
+<<<<<<< HEAD
 	<div class="row justify-content-center align-items-center">
+=======
+    <div class="row row-cols-1 justify-content-center align-items-center">
+>>>>>>> 18b5ceff3fc12beeac26d6de2673b0a0b0753f85
 
-		<!-- MENU PLANEJAMENTO COL-->
+        <!-- MENU PLANEJAMENTO COL-->
 
-		<div id="planning-menu" class="col my-2">
+        <div id="planning-menu" class="col my-2">
 
-			<!-- NAV BREADCRUMB -->
+            <!-- NAV BREADCRUMB -->
 
+<<<<<<< HEAD
 			<div class="row justify-content-center align-items-center h-100">
 				<div class="col border-bottom">
 					<nav id="planning-nav" aria-label="breadcrumb">
@@ -26,25 +31,38 @@
 						</ol>
 					</nav>
 				</div>
+=======
+            <div class="row row-cols-1 justify-content-center align-items-center h-100">
+                <div class="col border-bottom">
+                    <nav id="planning-nav" aria-label="breadcrumb">
+                        <ol class="breadcrumb px-2">
+                            <li class="breadcrumb-item"><a href="#">Menu</a></li>
+                            <li class="breadcrumb-item"><a href="#">Operation</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Planning 1</li>
+                        </ol>
+                    </nav>
+                </div>
+>>>>>>> 18b5ceff3fc12beeac26d6de2673b0a0b0753f85
 
-				<!-- SAFRA -->
+                <!-- SAFRA -->
 
-				<div class="col">
-					<div class="d-flex align-items-center px-3">
-						<label class="pe-3" for="safra">Safra:</label>
-						<select class="form-select w-25" name="safra" id="safra">
-							<option value="1" selected>1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
+                <div class="col">
+                    <div class="d-flex align-items-center px-3">
+                        <label class="pe-3" for="safra">Safra:</label>
+                        <select class="form-select w-25" name="safra" id="safra">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<!--TIPO DE APLICAÇÃO COL-->
+        <!--TIPO DE APLICAÇÃO COL-->
 
+<<<<<<< HEAD
 		<div id="application-type" class="row my-2">
 			<div class="d-flex align-items-center planning-opt p-2 h-100">
 				<label class="me-2" for="application-type">Tipo de aplicação:</label>
@@ -56,23 +74,43 @@
 				</select>
 			</div>
 		</div>
+=======
+        <div id="application-type" class="col my-2">
+            <div class="d-flex align-items-center planning-opt p-2 h-100">
+                <label class="me-2" for="application-type">Tipo de aplicação:</label>
+                <select class="form-select w-25" name="application-type" id="safra">
+                    <option value="adubacao" selected>Adubação</option>
+                    <option value="adubacao">Adubação</option>
+                    <option value="adubacao">Adubação</option>
+                    <option value="adubacao">Adubação</option>
+                </select>
+            </div>
+        </div>
+>>>>>>> 18b5ceff3fc12beeac26d6de2673b0a0b0753f85
 
 
-		<!-- DASHBOARD COL-ROW -->
+        <!-- DASHBOARD COL-ROW -->
 
+<<<<<<< HEAD
 		<div id="info-menu" class="row my-3">
 
 			<div id="main-dashboard" class="row align-items-center h-100">
+=======
+        <div id="info-menu" class="col my-3">
 
-				<!--MENU APLICAÇÃO COL-->
+            <div id="main-dashboard" class="row flex-column align-items-center h-100">
+>>>>>>> 18b5ceff3fc12beeac26d6de2673b0a0b0753f85
 
-				<div class="col">
-					<div class="d-flex align-items-center justify-content-between mx-3 my-3 p-2">
-						<h2 class="text-center m-0">Adubação</h2>
-						<a name="" id="" class="btn btn-primary" href="#" role="button">+ Novo </a>
-					</div>
-				</div>
+                <!--MENU APLICAÇÃO COL-->
 
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-between mx-3 my-3 p-2">
+                        <h2 class="text-center m-0">Adubação</h2>
+                        <a name="" id="" class="btn btn-primary" href="#" role="button">+ Novo </a>
+                    </div>
+                </div>
+
+<<<<<<< HEAD
 				<!--MAIN TABLE -->
 				<div class="row align-items-center h-100">
 					<div class="col px-3">
@@ -179,64 +217,188 @@
 </div>
 
 
+=======
+                <!--MAIN TABLE -->
+
+                <div class="col px-3">
+                    <table class="table table-md table-bordered table-hover">
+                        <thead id="main-table" class="table-light">
+                            <tr>
+                                <th scope="col">Trabalho</th>
+                                <th scope="col" class="w-25">Description</th>
+                                <th scope="col">Hour <img src="~/images/filter-top-bottom.svg" /></th>
+                                <th scope="col">Status <img src="~/images/filter-top-bottom.svg" /></th>
+                                <th scope="col">Last Access <img src="~/images/filter-top-bottom.svg" /></th>
+                                <th scope="col">Alarms</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><a href="#">Trabalho 1</a></th>
+                                <td>Fazenda Central A- Lorem</td>
+                                <td>4</td>
+                                <td>Online</td>
+                                <td>2021-02-05 08:28:36</td>
+                                <td><a href="#">01 Subscription Alert</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">Trabalho 2</a></th>
+                                <td>Fazenda Central A- Lorem</td>
+                                <td>4</td>
+                                <td>Online</td>
+                                <td>2021-02-05 08:28:36</td>
+                                <td><a href="#">01 Subscription Alert</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">Trabalho 3</a></th>
+                                <td>Fazenda Central A- Lorem</td>
+                                <td>4</td>
+                                <td>Online</td>
+                                <td>2021-02-05 08:28:36</td>
+                                <td><a href="#">01 Subscription Alert</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">Trabalho 4</a></th>
+                                <td>Fazenda Central A- Lorem</td>
+                                <td>4</td>
+                                <td>Online</td>
+                                <td>2021-02-05 08:28:36</td>
+                                <td><a href="#">01 Subscription Alert</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">Trabalho 5</a></th>
+                                <td>Fazenda Central A- Lorem</td>
+                                <td>4</td>
+                                <td>Online</td>
+                                <td>2021-02-05 08:28:36</td>
+                                <td><a href="#">01 Subscription Alert</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">Trabalho 6</a></th>
+                                <td>Fazenda Central A- Lorem</td>
+                                <td>4</td>
+                                <td>Online</td>
+                                <td>2021-02-05 08:28:36</td>
+                                <td><a href="#">01 Subscription Alert</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="#">Trabalho 7</a></th>
+                                <td>Fazenda Central A- Lorem</td>
+                                <td>4</td>
+                                <td>Online</td>
+                                <td>2021-02-05 08:28:36</td>
+                                <td><a href="#">01 Subscription Alert</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Operation navbar -->
+                    <div class="pagination">
+                        <ul> 
+                            <!--pages or li are comes from javascript -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+>>>>>>> 18b5ceff3fc12beeac26d6de2673b0a0b0753f85
 <!-- Scripts -->
-<script type="text/javascript">
-	@* JavaScript for Next *@
-		$(document).ready(function () {
-			$('.next').click(function () {
-				$('.pagination').find('.page-number.active').next().
-					addClass('active');
-				$('.pagination').find('.page-number.active').prev().
-					removeClass('active');
-			})
-	@* JavaScript for Previous *@
-				$('.prev').click(function () {
-					$('.pagination').find('.page-number.active').prev().
-						addClass('active');
-					$('.pagination').find('.page-number.active').next().
-						removeClass('active');
-				})
-	@* Java Script for Active *@
-				$(document).ready(function () {
-					$('.page-number a').click(function (e) {
+<!-- JavaScript-->
+<script>
+    const element = document.querySelector(".pagination ul");
+    let totalPages = 20;
+    let page = 10;
 
-						$('.page-number.active').removeClass('active');
+    @* calling function with passing parameters and adding inside element which is ul tag *@
+    element.innerHTML = createPagination(totalPages, page);
+    function createPagination(totalPages, page) {
+        let liTag = '';
+        let active;
+        let beforePage = page - 1;
+        let afterPage = page + 1;
+        if (page > 1) { @* show the next button if the page value is greater than 1 *@
+            liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i></span></li>`;
+        }
 
-						var $parent = $(this).parent();
-						$parent.addClass('active');
-						e.preventDefault();
-					});
-				});
-		})
+        if (page > 2) { @* if page value is less than 2 then add 1 after the previous button *@
+            liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span><i class="fas fa-angle-left"></i><i class="fas fa-angle-left"></i></span></li>`;
+            if (page > 3) { @* if page value is greater than 3 then add this (...) after the first li or page if necessary *@
+                liTag += `<li class="dots"><span></span></li>`;
+            }
+        }
+
+        @* how many pages or li show before the current li *@
+        if (page == totalPages) {
+            beforePage = beforePage - 2;
+        } else if (page <= totalPages && page > 2) {
+            beforePage = beforePage - 1;
+        }
+        @* how many pages or li show after the current li *@
+        if (page == 1) {
+            afterPage = afterPage + 2;
+        } else if (page >= 2) {
+            afterPage = afterPage + 1;
+        }
+
+        for (var plength = beforePage; plength <= afterPage; plength++) {
+            if (plength > totalPages) { @* if plength is greater than totalPage length then continue *@
+                continue;
+            }
+            if (plength == 0) { @* if plength is 0 than add +1 in plength value *@
+                plength = plength + 1;
+            }
+            if (page == plength) { @* if page is equal to plength than assign active string in the active variable *@
+                active = "active";
+            } else { @* else leave empty to the active variable *@
+                active = "";
+            }
+            liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+        }
+
+        if (page < totalPages - 1) { @* if page value is less than totalPage value by -1 then show the last li or page *@
+            if (page < totalPages - 2) { @* if page value is less than totalPage value by -2 then add this (...) before the last li or page if necessary *@
+                liTag += `<li class="dots"><span></span></li>`;
+            }
+            liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span><i class="fas fa-angle-right"></i><i class="fas fa-angle-right"></i></span></li>`;
+        }
+
+        if (page < totalPages) { @* show the next button if the page value is less than totalPage(20) *@
+            liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"><span><i class="fas fa-angle-right"></i></span></li>`;
+        }
+        element.innerHTML = liTag; @* add li tag inside ul tag *@
+        return liTag; @* return li tag *@
+    }
 </script>
 
 <style>
-	#planning-menu,
-	#application-type,
-	#info-menu {
-		background-color: #FFFF;
-		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3)
-	}
+    #planning-menu,
+    #application-type,
+    #info-menu {
+        background-color: #FFFF;
+        box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3)
+    }
 
-	#planning-menu {
-		width: 100%;
-		height: 8rem;
-	}
-
-
-	#application-type {
-		width: 95%;
-		height: 6rem;
-	}
-
-	#info-menu {
-		width: 95%;
-		height: 100%;
-	}
+    #planning-menu {
+        width: 100%;
+        height: 8rem;
+    }
 
 
-	#dashboard {
-		height: 100%;
-	}
+    #application-type {
+        width: 95%;
+        height: 6rem;
+    }
+
+    #info-menu {
+        width: 95%;
+        height: 100%;
+    }
+
+
+    #dashboard {
+        height: 100%;
+    }
 
 </style>
