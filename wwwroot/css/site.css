@@ -374,7 +374,7 @@ nav-link:active {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--std-black);
+    color: var(--std-white);
     margin: 12px auto;
 }
 
@@ -630,9 +630,10 @@ nav-link:active {
     justify-content: center;
 }
 
-    .pagination ul {       
+    .pagination ul {
         display: flex;
         min-width: 450px;
+        max-width: 450px;
         flex-wrap: wrap;
         justify-content: center;
         background: var(--std-grey);
@@ -685,6 +686,6 @@ nav-link:active {
         .pagination ul li.numb:hover,
         .pagination ul li:first-child:hover,
         .pagination ul li:last-child:hover {
-            color: #fff;
+            color: var(--std-white);
             background: var(--std-orange);
         }
