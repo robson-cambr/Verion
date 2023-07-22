@@ -6,55 +6,175 @@
 	Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
 
-	<!-- PAGE CONTENT-->
+<!-- PAGE CONTENT-->
 
-	<div class="row row-cols-1 h-100 w-100">
-
-		<div id="operation" class="col-5 bg-white p-0 w-100">
-			<div class="row row-cols-1">
+<div class="row">
+	<div id="operation" class="col bg-white">
+		<div class="row">
+			<div class="col">
+				<!--PLAINNIGN SELECT LIST-->
+				<div class="d-flex align-content-center">
+				<label class="me-2" for="safra">Safra:</label>
+				<select class="form-select w-25" aria-label=".form-select-lg" name="safra" id="safra">
+					<option value="1" selected>1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				</div>
+			</div>
+			<!-- OPERATION DATA -->
+			<div class="row border-top">
 				<div class="col">
-
-					<!--PLAINNIGN SELECT LIST-->
-
-					<div id="painning-select-list" class="d-flex p-3 border-bottom align-items-center">
-					<label class="me-2" for="safra">Safra:</label>
-					<select class="form-select w-25" aria-label=".form-select-lg" name="safra" id="safra">
-						<option value="1" selected>1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-					</select>
+					<div id="data-operation" class="text-center">
+						<h2>OPERATION DATA</h2>
 					</div>
-
-				</div>
-			
-				<!-- OPERATION DATA -->
-				
-				<div id="data-operation" class="col text-center">
-					<h2>OPERATION DATA</h2>
 				</div>
 			</div>
 		</div>
-
-				<!--OPERATION INFOS-->
-
-		<div id="operation-info" class="col-2 p-0 my-3 w-100">
-			<div class="d-flex h-100">
-				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
-				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
-				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
-				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
-				<div class="bg-white mx-2 flex-fill operation-info-shadow">COL</div>
-			</div>
-		</div>
-
-		<!--DASHBOARD IDENTITY-->
-
-		<div id="dashboard-identity" class="col-5 bg-white my-3 w-100 border text-center">
-			<h2>IDENTITY</h2>
-		</div>
-
 	</div>
+</div>
+
+<!--OPERATION INFOS-->
+
+<div class="row">
+	<div id="operation-info" class="col my-2">
+		<div class="row h-100 align-content-center">
+			<div class="col bg-white mx-3">
+				<div class="row row-cols-1">
+					<div class="col">
+						<caption>Área</caption>
+						<i class="bi bi-info-circle"></i>
+					</div>
+					<div class="col">
+						<h2>126,560 ha</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col bg-white mx-3">
+				<div class="row row-cols-1">
+					<div class="col">
+						<caption>Tempo</caption>
+						<i class="bi bi-info-circle"></i>
+					</div>
+					<div class="col">
+						<h2>10h Trabalhada</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col bg-white mx-3">
+				<div class="row row-cols-1">
+					<div class="col">
+						<caption>Velocidade</caption>
+						<i class="bi bi-info-circle"></i>
+					</div>
+					<div class="col">
+						<div class="row">
+							<div class="col">
+								<img src="~/images/plus-minus.svg" width="40px" />
+								<h2>60Km</h2>
+							</div>
+							<div class="col">
+								<img src="~/images/arrow-down.svg" width="40px" />
+								<h2>40Km</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col bg-white mx-3">
+				<div class="row row-cols-1">
+					<div class="col">
+						<caption>Dose</caption>
+						<i class="bi bi-info-circle"></i>
+					</div>
+					<div class="col">
+						<h2>Taxa Variada</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col bg-white mx-3">
+				<div class="row row-cols-1">
+					<div class="col">
+						<caption>Alarmes</caption>
+						<i class="bi bi-info-circle"></i>
+					</div>
+					<div class="col">
+						<h2>5</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--DASHBOARD IDENTITY-->
+
+<div class="row mb-3">
+	<div id="dashboard-identity" class="col bg-white">
+		<div class="row">
+			<div class="col">
+				<h2>Indentidade</h2>
+			</div>
+			<div class="col">
+				<div class="d-flex justify-content-end align-items-center me-4">
+					<label class="me-2" for="id-type">ID:</label>
+					<select class="form-select align-self-stretch" name="id-type" id="safra">
+						<option value="velocity" selected>Velocidade</option>
+						<option value="velocity">Velocidade</option>
+						<option value="velocity">Velocidade</option>
+						<option value="velocity">Velocidade</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="table table-md table-bordered table-hover">
+					<thead class="table-light">
+						<tr>
+							<th scope="col">Tipo</th>
+							<th scope="col w-25">Descrição</th>
+							<th scope="col">Latitude</th>
+							<th scope="col">Longitude</th>
+							<th scope="col">Data</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>mdo</td>
+							<td>mdo</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>fat</td>
+							<td>mdo</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>fat</td>
+							<td>mdo</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>fat</td>
+							<td>mdo</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <!-- ----- Bootstrap 5.2.0 Js Link Added ----- -->
