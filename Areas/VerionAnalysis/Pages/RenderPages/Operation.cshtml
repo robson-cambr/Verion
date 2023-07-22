@@ -8,7 +8,7 @@
 
 
 <div class="container-fluid">
-    <div class="row row-cols-1 justify-content-center align-items-center">
+	<div class="row justify-content-center align-items-center">
 
         <!-- MENU PLANEJAMENTO COL-->
 
@@ -16,16 +16,16 @@
 
             <!-- NAV BREADCRUMB -->
 
-            <div class="row row-cols-1 justify-content-center align-items-center h-100">
-                <div class="col border-bottom">
-                    <nav id="planning-nav" aria-label="breadcrumb">
-                        <ol class="breadcrumb px-2">
-                            <li class="breadcrumb-item"><a href="#">Menu</a></li>
-                            <li class="breadcrumb-item"><a href="#">Operation</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Planning 1</li>
-                        </ol>
-                    </nav>
-                </div>
+			<div class="row justify-content-center align-items-center h-100">
+				<div class="col border-bottom">
+					<nav id="planning-nav" aria-label="breadcrumb">
+						<ol class="breadcrumb px-2">
+							<li class="breadcrumb-item"><a href="#">Menu</a></li>
+							<li class="breadcrumb-item"><a href="#">Operation</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Planning 1</li>
+						</ol>
+					</nav>
+				</div>
 
                 <!-- SAFRA -->
 
@@ -45,24 +45,24 @@
 
         <!--TIPO DE APLICAÇÃO COL-->
 
-        <div id="application-type" class="col my-2">
-            <div class="d-flex align-items-center planning-opt p-2 h-100">
-                <label class="me-2" for="application-type">Tipo de aplicação:</label>
-                <select class="form-select w-25" name="application-type" id="safra">
-                    <option value="adubacao" selected>Adubação</option>
-                    <option value="adubacao">Adubação</option>
-                    <option value="adubacao">Adubação</option>
-                    <option value="adubacao">Adubação</option>
-                </select>
-            </div>
-        </div>
+		<div id="application-type" class="row my-2">
+			<div class="d-flex align-items-center planning-opt p-2 h-100">
+				<label class="me-2" for="application-type">Tipo de aplicação:</label>
+				<select class="form-select w-25" name="application-type" id="safra">
+					<option value="adubacao" selected>Adubação</option>
+					<option value="adubacao">Adubação</option>
+					<option value="adubacao">Adubação</option>
+					<option value="adubacao">Adubação</option>
+				</select>
+			</div>
+		</div>
 
 
         <!-- DASHBOARD COL-ROW -->
 
-        <div id="info-menu" class="col my-3">
+		<div id="info-menu" class="row my-3">
 
-            <div id="main-dashboard" class="row flex-column align-items-center h-100">
+			<div id="main-dashboard" class="row align-items-center h-100">
 
                 <!--MENU APLICAÇÃO COL-->
 
@@ -73,89 +73,109 @@
                     </div>
                 </div>
 
-                <!--MAIN TABLE -->
-
-                <div class="col px-3">
-                    <table class="table table-md table-bordered table-hover">
-                        <thead id="main-table" class="table-light">
-                            <tr>
-                                <th scope="col">Trabalho</th>
-                                <th scope="col" class="w-25">Description</th>
-                                <th scope="col">Hour <img src="~/images/filter-top-bottom.svg" /></th>
-                                <th scope="col">Status <img src="~/images/filter-top-bottom.svg" /></th>
-                                <th scope="col">Last Access <img src="~/images/filter-top-bottom.svg" /></th>
-                                <th scope="col">Alarms</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"><a href="#">Trabalho 1</a></th>
-                                <td>Fazenda Central A- Lorem</td>
-                                <td>4</td>
-                                <td>Online</td>
-                                <td>2021-02-05 08:28:36</td>
-                                <td><a href="#">01 Subscription Alert</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">Trabalho 2</a></th>
-                                <td>Fazenda Central A- Lorem</td>
-                                <td>4</td>
-                                <td>Online</td>
-                                <td>2021-02-05 08:28:36</td>
-                                <td><a href="#">01 Subscription Alert</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">Trabalho 3</a></th>
-                                <td>Fazenda Central A- Lorem</td>
-                                <td>4</td>
-                                <td>Online</td>
-                                <td>2021-02-05 08:28:36</td>
-                                <td><a href="#">01 Subscription Alert</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">Trabalho 4</a></th>
-                                <td>Fazenda Central A- Lorem</td>
-                                <td>4</td>
-                                <td>Online</td>
-                                <td>2021-02-05 08:28:36</td>
-                                <td><a href="#">01 Subscription Alert</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">Trabalho 5</a></th>
-                                <td>Fazenda Central A- Lorem</td>
-                                <td>4</td>
-                                <td>Online</td>
-                                <td>2021-02-05 08:28:36</td>
-                                <td><a href="#">01 Subscription Alert</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">Trabalho 6</a></th>
-                                <td>Fazenda Central A- Lorem</td>
-                                <td>4</td>
-                                <td>Online</td>
-                                <td>2021-02-05 08:28:36</td>
-                                <td><a href="#">01 Subscription Alert</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">Trabalho 7</a></th>
-                                <td>Fazenda Central A- Lorem</td>
-                                <td>4</td>
-                                <td>Online</td>
-                                <td>2021-02-05 08:28:36</td>
-                                <td><a href="#">01 Subscription Alert</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- Operation navbar -->
-                    <div class="pagination">
-                        <ul> 
-                            <!--pages or li are comes from javascript -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+				<!--MAIN TABLE -->
+				<div class="row align-items-center h-100">
+					<div class="col px-3">
+						<table class="table table-md table-bordered table-hover">
+							<thead id="main-table" class="table-light">
+								<tr>
+									<th scope="col">Trabalho</th>
+									<th scope="col" class="w-25">Description</th>
+									<th scope="col">Hour <img src="~/images/filter-top-bottom.svg" /></th>
+									<th scope="col">Status <img src="~/images/filter-top-bottom.svg" /></th>
+									<th scope="col">Last Access <img src="~/images/filter-top-bottom.svg" /></th>
+									<th scope="col">Alarms</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row"><a href="#">Trabalho 1</a></th>
+									<td>Fazenda Central A- Lorem</td>
+									<td>4</td>
+									<td>Online</td>
+									<td>2021-02-05 08:28:36</td>
+									<td><a href="#">01 Subscription Alert</a></td>
+								</tr>
+								<tr>
+									<th scope="row"><a href="#">Trabalho 2</a></th>
+									<td>Fazenda Central A- Lorem</td>
+									<td>4</td>
+									<td>Online</td>
+									<td>2021-02-05 08:28:36</td>
+									<td><a href="#">01 Subscription Alert</a></td>
+								</tr>
+								<tr>
+									<th scope="row"><a href="#">Trabalho 3</a></th>
+									<td>Fazenda Central A- Lorem</td>
+									<td>4</td>
+									<td>Online</td>
+									<td>2021-02-05 08:28:36</td>
+									<td><a href="#">01 Subscription Alert</a></td>
+								</tr>
+								<tr>
+									<th scope="row"><a href="#">Trabalho 4</a></th>
+									<td>Fazenda Central A- Lorem</td>
+									<td>4</td>
+									<td>Online</td>
+									<td>2021-02-05 08:28:36</td>
+									<td><a href="#">01 Subscription Alert</a></td>
+								</tr>
+								<tr>
+									<th scope="row"><a href="#">Trabalho 5</a></th>
+									<td>Fazenda Central A- Lorem</td>
+									<td>4</td>
+									<td>Online</td>
+									<td>2021-02-05 08:28:36</td>
+									<td><a href="#">01 Subscription Alert</a></td>
+								</tr>
+								<tr>
+									<th scope="row"><a href="#">Trabalho 6</a></th>
+									<td>Fazenda Central A- Lorem</td>
+									<td>4</td>
+									<td>Online</td>
+									<td>2021-02-05 08:28:36</td>
+									<td><a href="#">01 Subscription Alert</a></td>
+								</tr>
+								<tr>
+									<th scope="row"><a href="#">Trabalho 7</a></th>
+									<td>Fazenda Central A- Lorem</td>
+									<td>4</td>
+									<td>Online</td>
+									<td>2021-02-05 08:28:36</td>
+									<td><a href="#">01 Subscription Alert</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--PAGINAÇÃO COL-->
+				<div class="row justify-content-center">
+					<div class="col-2 text-center">
+						<ul class="pagination text-center">
+							<li>
+								<a class="prev" href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+									<span class="sr-only">Previous</span>
+								</a>
+							</li>
+							<li class="page-number active"> <a href="#">1</a> </li>
+							<li class="page-number"> <a href="#">2</a> </li>
+							<li class="page-number"> <a href="#">3</a> </li>
+							<li class="page-number"> <a href="#">4</a> </li>
+							<li class="page-number"> <a href="#">5</a> </li>
+							<li class="page-number"> <a href="#">6</a> </li>
+							<li>
+								<a class="next" href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+									<span class="sr-only">Next</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- Scripts -->
