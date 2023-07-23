@@ -185,12 +185,12 @@ a {
     font-size: 40px;
     background: var(--std-black);
     color: var(--std-grey);
-    line-height: 60px;
     font-weight: 600;
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
-    padding: 0;
+    height: 64px;
+    line-height: 64px;
 }
 
 .add-remove-btn {
@@ -701,7 +701,6 @@ nav-link:active {
 
 .main-menu {
     background: var(--std-grey);
-    height: 5%;
 }
 
 .main-menu-display {
@@ -710,18 +709,17 @@ nav-link:active {
 
 /*! <breadcrumbs> */
 .breadcrumb-header {
-    height: 80px;
     background: var(--std-black);
     border: none;
+    margin: 10px 0;
 }
 
 .breadcrumb {
     font-weight: 600;
     align-items: center;
     margin: 0;
-    padding: 20px 0 0 20px;
     text-decoration: none;
-    height: 80px;
+    padding: 20px;
 }
 
 .breadcrumb-item a {
