@@ -291,7 +291,7 @@ footer {
 
 
 footer li, footer p, footer a {
-    color: var(--std-green);
+    color: var(--alt-grey);
 }
 
 footer ul {
@@ -313,12 +313,10 @@ footer .line {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.1);
     border-radius: 6px;
 }
 
     .social-icons a:hover {
-        background-color: var(--alt-grey);
     }
 
 
