@@ -7,272 +7,240 @@
 }
 
 
-<div class="container-fluid">
-	<div class="row justify-content-center align-items-center">
-
-        <!-- MENU PLANEJAMENTO COL-->
-
-        <div id="planning-menu" class="col my-2">
-
-            <!-- NAV BREADCRUMB -->
-
-			<div class="row justify-content-center align-items-center h-100">
-				<div class="col border-bottom">
-					<nav id="planning-nav" aria-label="breadcrumb">
-						<ol class="breadcrumb px-2">
-							<li class="breadcrumb-item"><a href="#">Menu</a></li>
-							<li class="breadcrumb-item"><a href="#">Operation</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Planning 1</li>
-						</ol>
-					</nav>
-				</div>
-
-                <!-- SAFRA -->
-
-                <div class="col">
-                    <div class="d-flex align-items-center px-3">
-                        <label class="pe-3" for="safra">Safra:</label>
-                        <select class="form-select w-25" name="safra" id="safra">
-                            <option value="1" selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+<!-- Breadcrumb Navigation -->
+<div class="operation-header">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Menu</a></li>
+        <li class="breadcrumb-item"><a href="#">Operação</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Monitorar</li>
+    </ol>
+</div> <!-- Breadcrumb Navigation /> -->
+<!-- Crop & Filters Menu -->
+<div class="mt-3 mb-3">
+    <!-- Crop Selection -->
+    <div class="d-flex align-items-center justify-content-center px-3">
+        <label id="operation-filters" class="pe-3" for="crop">Safra:</label>
+        <select class="form-select w-30" name="safra" id="safra">
+            <option class="dropdown-content" value="1" selected>Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="2">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="3">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="4">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+        </select> <!-- Crop Selection /> -->
+        <!-- State Filters -->
+        <label id="operation-filters" class="pe-3 ps-3" for="filter">Aplicação:</label>
+        <select class="form-select w-25" name="application-filter" id="application-filter">
+            <option class="dropdown-content" value="1" selected>Application</option>
+            <option class="dropdown-content" value="2">fExFertilization</option>
+            <option class="dropdown-content" value="4">fExIrrigation</option>
+            <option class="dropdown-content" value="3">fExDrill</option>
+            <option class="dropdown-content" value="4">fExHarvest</option>
+        </select> <!-- State Filters /> -->
+        <!-- Application Filters -->
+        <label id="operation-filters" class="" for="filter">Situação:</label>
+        <select class="form-select w-25" name="state-filter" id="state-filter">
+            <option class="dropdown-content" value="1" selected>State</option>
+            <option class="dropdown-content" value="2">fExActive</option>
+            <option class="dropdown-content" value="3">fExEnded</option>
+            <option class="dropdown-content" value="4">fExPaused</option>
+            <option class="dropdown-content" value="4">fExError</option>
+        </select> <!-- Filters /> -->
+    </div>
+</div> <!-- Crop & Filters Menu /> -->
+<!-- Operation Board -->
+<div id="info-menu">
+    <!-- Operation Header -->
+    <h1 class="monitoring-header">Monitoramento</h1> <!-- Header -->
+    <div class="d-flex justify-content-end">
+        <a name="add" id="item-add" class="add-remove-btn btn btn-primary" href="#" role="button"><i class="fa fa-plus" aria-hidden="true"></i> Adicionar </a> <!-- add -->
+        <a name="remove" id="item-remove" class="add-remove-btn btn btn-primary" href="#" role="button"><i class="fa fa-minus" aria-hidden="true"></i> Remover </a> <!-- remove -->
+    </div> <!-- Operation Header /> -->
+    <!-- Display Tables -->
+    <div class="monitoring-content align-items-center">
+        <table class="table table-md table-bordered table-hover">
+            <thead id="main-table" class="table-light">
+                <tr>
+                    <th class="column-name" scope="col">Aplicação</th>
+                    <th class="column-name w-25" scope="col">Descrição</th>
+                    <th class="column-name" scope="col">Data <img src="~/images/filter-top-bottom.svg" /></th>
+                    <th class="column-name" scope="col">Situação <img src="~/images/filter-top-bottom.svg" /></th>
+                    <th class="column-name" scope="col">Último Acesso <img src="~/images/filter-top-bottom.svg" /></th>
+                    <th class="column-name" scope="col">Avisos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+                <tr>
+                    <th class="column-content" scope="row"><a href="#">Trabalho 1</a></th>
+                    <td class="column-content">Fazenda Central A- Lorem</td>
+                    <td class="column-content">dd/mm/yyyy</td>
+                    <td class="column-content">Online</td>
+                    <td class="column-content">2021-02-05 08:28:36</td>
+                    <td class="column-content"><a href="#">01 Subscription Alert</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Pagination -->
+    <div class="justify-content-center">
+        <div class="pagination">
+            <ul> <!--pages or li are comes from javascript --> </ul>
         </div>
-
-        <!--TIPO DE APLICAÇÃO COL-->
-
-		<div id="application-type" class="row my-2">
-			<div class="d-flex align-items-center planning-opt p-2 h-100">
-				<label class="me-2" for="application-type">Tipo de aplicação:</label>
-				<select class="form-select w-25" name="application-type" id="safra">
-					<option value="adubacao" selected>Adubação</option>
-					<option value="adubacao">Adubação</option>
-					<option value="adubacao">Adubação</option>
-					<option value="adubacao">Adubação</option>
-				</select>
-			</div>
-		</div>
-
-
-        <!-- DASHBOARD COL-ROW -->
-
-		<div id="info-menu" class="row my-3">
-
-			<div id="main-dashboard" class="row align-items-center h-100">
-
-                <!--MENU APLICAÇÃO COL-->
-
-                <div class="col">
-                    <div class="d-flex align-items-center justify-content-between mx-3 my-3 p-2">
-                        <h2 class="text-center m-0">Adubação</h2>
-                        <a name="" id="" class="btn btn-primary" href="#" role="button">+ Novo </a>
-                    </div>
-                </div>
-
-				<!--MAIN TABLE -->
-				<div class="row align-items-center h-100">
-					<div class="col px-3">
-						<table class="table table-md table-bordered table-hover">
-							<thead id="main-table" class="table-light">
-								<tr>
-									<th scope="col">Trabalho</th>
-									<th scope="col" class="w-25">Description</th>
-									<th scope="col">Hour <img src="~/images/filter-top-bottom.svg" /></th>
-									<th scope="col">Status <img src="~/images/filter-top-bottom.svg" /></th>
-									<th scope="col">Last Access <img src="~/images/filter-top-bottom.svg" /></th>
-									<th scope="col">Alarms</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row"><a href="#">Trabalho 1</a></th>
-									<td>Fazenda Central A- Lorem</td>
-									<td>4</td>
-									<td>Online</td>
-									<td>2021-02-05 08:28:36</td>
-									<td><a href="#">01 Subscription Alert</a></td>
-								</tr>
-								<tr>
-									<th scope="row"><a href="#">Trabalho 2</a></th>
-									<td>Fazenda Central A- Lorem</td>
-									<td>4</td>
-									<td>Online</td>
-									<td>2021-02-05 08:28:36</td>
-									<td><a href="#">01 Subscription Alert</a></td>
-								</tr>
-								<tr>
-									<th scope="row"><a href="#">Trabalho 3</a></th>
-									<td>Fazenda Central A- Lorem</td>
-									<td>4</td>
-									<td>Online</td>
-									<td>2021-02-05 08:28:36</td>
-									<td><a href="#">01 Subscription Alert</a></td>
-								</tr>
-								<tr>
-									<th scope="row"><a href="#">Trabalho 4</a></th>
-									<td>Fazenda Central A- Lorem</td>
-									<td>4</td>
-									<td>Online</td>
-									<td>2021-02-05 08:28:36</td>
-									<td><a href="#">01 Subscription Alert</a></td>
-								</tr>
-								<tr>
-									<th scope="row"><a href="#">Trabalho 5</a></th>
-									<td>Fazenda Central A- Lorem</td>
-									<td>4</td>
-									<td>Online</td>
-									<td>2021-02-05 08:28:36</td>
-									<td><a href="#">01 Subscription Alert</a></td>
-								</tr>
-								<tr>
-									<th scope="row"><a href="#">Trabalho 6</a></th>
-									<td>Fazenda Central A- Lorem</td>
-									<td>4</td>
-									<td>Online</td>
-									<td>2021-02-05 08:28:36</td>
-									<td><a href="#">01 Subscription Alert</a></td>
-								</tr>
-								<tr>
-									<th scope="row"><a href="#">Trabalho 7</a></th>
-									<td>Fazenda Central A- Lorem</td>
-									<td>4</td>
-									<td>Online</td>
-									<td>2021-02-05 08:28:36</td>
-									<td><a href="#">01 Subscription Alert</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<!--PAGINAÇÃO COL-->
-				<div class="row justify-content-center">
-					<div class="col-2 text-center">
-						<ul class="pagination text-center">
-							<li>
-								<a class="prev" href="#" aria-label="Previous">
-									<span aria-hidden="true">&laquo;</span>
-									<span class="sr-only">Previous</span>
-								</a>
-							</li>
-							<li class="page-number active"> <a href="#">1</a> </li>
-							<li class="page-number"> <a href="#">2</a> </li>
-							<li class="page-number"> <a href="#">3</a> </li>
-							<li class="page-number"> <a href="#">4</a> </li>
-							<li class="page-number"> <a href="#">5</a> </li>
-							<li class="page-number"> <a href="#">6</a> </li>
-							<li>
-								<a class="next" href="#" aria-label="Next">
-									<span aria-hidden="true">&raquo;</span>
-									<span class="sr-only">Next</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    </div> <!-- Pagination /> -->
 </div>
 
 <!-- Scripts -->
-<!-- JavaScript-->
+<!-- JavaScript -->
 <script>
     const element = document.querySelector(".pagination ul");
     let totalPages = 20;
     let page = 10;
 
     @* calling function with passing parameters and adding inside element which is ul tag *@
-    element.innerHTML = createPagination(totalPages, page);
+        element.innerHTML = createPagination(totalPages, page);
     function createPagination(totalPages, page) {
         let liTag = '';
         let active;
         let beforePage = page - 1;
         let afterPage = page + 1;
-        if (page > 1) { @* show the next button if the page value is greater than 1 *@
-            liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i></span></li>`;
+        if (page > 1) {
+    @* show the next button if the page value is greater than 1 *@
+                liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i></span></li>`;
         }
 
-        if (page > 2) { @* if page value is less than 2 then add 1 after the previous button *@
-            liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span><i class="fas fa-angle-left"></i><i class="fas fa-angle-left"></i></span></li>`;
-            if (page > 3) { @* if page value is greater than 3 then add this (...) after the first li or page if necessary *@
-                liTag += `<li class="dots"><span></span></li>`;
+        if (page > 2) {
+    @* if page value is less than 2 then add 1 after the previous button *@
+                liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span><i class="fas fa-angle-left"></i><i class="fas fa-angle-left"></i></span></li>`;
+            if (page > 3) {
+    @* if page value is greater than 3 then add this (...) after the first li or page if necessary *@
+                    liTag += `<li class="dots"><span></span></li>`;
             }
         }
 
-        @* how many pages or li show before the current li *@
-        if (page == totalPages) {
+    @* how many pages or li show before the current li *@
+                                                            if (page == totalPages) {
             beforePage = beforePage - 2;
-        } else if (page <= totalPages && page > 2) {
+        } else if (page == totalPages - 1) {
             beforePage = beforePage - 1;
         }
-        @* how many pages or li show after the current li *@
-        if (page == 1) {
+    @* how many pages or li show after the current li *@
+                                                            if (page == 1) {
             afterPage = afterPage + 2;
-        } else if (page >= 2) {
+        } else if (page == 2) {
             afterPage = afterPage + 1;
         }
 
         for (var plength = beforePage; plength <= afterPage; plength++) {
-            if (plength > totalPages) { @* if plength is greater than totalPage length then continue *@
-                continue;
+            if (plength > totalPages) {
+    @* if plength is greater than totalPage length then continue *@
+                                                                    continue;
             }
-            if (plength == 0) { @* if plength is 0 than add +1 in plength value *@
-                plength = plength + 1;
+            if (plength == 0) {
+    @* if plength is 0 than add +1 in plength value *@
+                    plength = plength + 1;
             }
-            if (page == plength) { @* if page is equal to plength than assign active string in the active variable *@
-                active = "active";
-            } else { @* else leave empty to the active variable *@
-                active = "";
+            if (page == plength) {
+    @* if page is equal to plength than assign active string in the active variable *@
+                    active = "active";
+            } else {
+    @* else leave empty to the active variable *@
+                    active = "";
             }
             liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
         }
 
-        if (page < totalPages - 1) { @* if page value is less than totalPage value by -1 then show the last li or page *@
-            if (page < totalPages - 2) { @* if page value is less than totalPage value by -2 then add this (...) before the last li or page if necessary *@
-                liTag += `<li class="dots"><span></span></li>`;
+        if (page < totalPages - 1) {
+    @* if page value is less than totalPage value by -1 then show the last li or page *@
+                                                                if (page < totalPages - 2) {
+    @* if page value is less than totalPage value by -2 then add this (...) before the last li or page if necessary *@
+                    liTag += `<li class="dots"><span></span></li>`;
             }
             liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span><i class="fas fa-angle-right"></i><i class="fas fa-angle-right"></i></span></li>`;
         }
 
-        if (page < totalPages) { @* show the next button if the page value is less than totalPage(20) *@
-            liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"><span><i class="fas fa-angle-right"></i></span></li>`;
+        if (page < totalPages) {
+    @* show the next button if the page value is less than totalPage(20) *@
+                liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"><span><i class="fas fa-angle-right"></i></span></li>`;
         }
         element.innerHTML = liTag; @* add li tag inside ul tag *@
-        return liTag; @* return li tag *@
-    }
+                                                            return liTag; @* return li tag *@
+                                                        }
 </script>
-
-<style>
-    #planning-menu,
-    #application-type,
-    #info-menu {
-        background-color: #FFFF;
-        box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3)
-    }
-
-    #planning-menu {
-        width: 100%;
-        height: 8rem;
-    }
-
-
-    #application-type {
-        width: 95%;
-        height: 6rem;
-    }
-
-    #info-menu {
-        width: 95%;
-        height: 100%;
-    }
-
-
-    #dashboard {
-        height: 100%;
-    }
-
-</style>
