@@ -55,7 +55,7 @@
                 </div>
             </div> <!-- side menu /> -->
         </div>
-        
+
         <div class="col p-0">
             <!-- main menu -->
             <header class="main-menu">
@@ -116,6 +116,17 @@
                 </nav>
             </header>
 
+            <div class="container-fluid">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb-header">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Menu</a></li>
+                        <li class="breadcrumb-item"><a href="#">Operação</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Monitorar</li>
+                    </ol>
+                </div> <!-- Breadcrumb Navigation /> -->
+            </div>
+
             <!-- render -->
             <div class="container-fluid">
                 <main role="main" class="">
@@ -133,7 +144,7 @@
     <script type="text/javascript">
         @* Javascript - Expand/Collapse User Menu *@
             let userMenu = document.getElementById("user-menu")
-            function toggleMenu() {
+        function toggleMenu() {
             userMenu.classList.toggle("open-menu");
         }
 
