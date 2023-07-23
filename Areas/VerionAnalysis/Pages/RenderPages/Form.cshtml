@@ -8,7 +8,7 @@
 
 <!-- FORM CONTENT-->
 <div class="row">
-	<div id="operation" class="col bg-white">
+	<div id="operation" class="col bg-white py-3">
 		<div class="row align-items-center p-3">
 			<!--PLAINNIGN SELECT LIST-->
 			<label class="w-auto me-2" for="planejamento">Planejamento:</label>
@@ -32,7 +32,7 @@
 					</select>
 				</div>
 				<!--DADOS REGISTRADOS-->
-				<div class="row mt-5 p-2">
+				<div class="row p-2 align-content-center">
 					<div class="d-inline">
 						<i class="bi bi-square-fill" style="color: #05AABE ;"></i>
 						<span class="ps-2">321.12</span>
@@ -160,59 +160,48 @@
 
 <!--OPERATION INFOS-->
 
-<div class="row my-3">
+<div class="row">
 	<!--AREA-->
-	<div class="col bg-white border mx-2">
-		<div class="d-inline-flex">
-			<p>Área</p>
-			<i class="bi bi-info-circle"></i>
+	<div class="col bg-white border my-2 p-2 mx-1">
+		<div class="d-flex align-items-center justify-content-between p-3">
+		<p class="m-0">Área</p>
+		<i class="bi bi-info-circle"></i>
 		</div>
-		<h3>126,560 ha</h3>
+		<p id="area-data" class="text-center h4 py-2">126,560 ha</p>
 	</div>
 	<!--TEMPO-->
-	<div class="col bg-white border mx-2">
-		<div class="d-inline-flex">
-			<p>Tempo</p>
+	<div class="col bg-white border my-2 p-2 mx-1">
+		<div class="d-flex align-items-center justify-content-between text-center p-3">
+			<p class="m-0">Tempo</p>
 			<i class="bi bi-info-circle"></i>
 		</div>
-		<h3>10h Trabalhada</h3>
+		<p id="tempo-data" class="text-center h4 py-2">10h Trabalhada</p>
 	</div>
 	<!--vELOCIDADE-->
-	<div class="col bg-white border mx-2">
-		<div class="d-inline-flex">
-			<p>Velocidade</p>
+	<div class="col bg-white border my-2 p-2 mx-1">
+		<div class="d-flex align-items-center justify-content-between text-center p-3">
+			<p class="m-0">Velocidade</p>
 			<i class="bi bi-info-circle"></i>
 		</div>
-		<div class="d-flex justify-content-center">
-			<div class="flex-grow-1">
-				<img src="~/images/plus-minus.svg" width="30px" />
-				<h3>60km</h3>
-				<p>Média</p>
-			</div>
-			<div class="flex-grow-1">
-				<img src="~/images/arrow-down.svg" width="30px" />
-				<h3>40km</h3>
-				<p>Mínima</p>
-			</div>
-		</div>
+		<!--DATA VELOCIDADE-->
+		<p id="velocidade-data" class="text-center h4 py-2 ">126,560 ha</p>
 	</div>
 	<!--DOSE-->
-	<div class="col bg-white border mx-2">
-		<div class="d-inline-flex">
-			<p>Dose</p>
+	<div class="col bg-white border my-2 p-2 mx-1">
+		<div class="d-flex align-items-center justify-content-between text-center p-3">
+			<p class="m-0">Área</p>
 			<i class="bi bi-info-circle"></i>
-			<h3>Taxa Variada</h3>
 		</div>
+		<p id="dose-data" class="text-center h4 py-2">Taxa Variada</p>
 	</div>
 	<!--ALARMES-->
-	<div class="col bg-white border mx-2">
-		<div class="d-inline-flex">
-			<p>Alarmes</p>
+	<div class="col bg-white border my-2 p-2 mx-1">
+		<div class="d-flex align-items-center justify-content-between text-center p-3">
+			<p class="m-0">Alarme</p>
 			<i class="bi bi-info-circle"></i>
 		</div>
-		<h3>5</h3>
+		<p id="alarme-data" class="text-center h4 py-2">5</p>
 	</div>
-</div>
 
 <!--DASHBOARD IDENTITY-->
 
