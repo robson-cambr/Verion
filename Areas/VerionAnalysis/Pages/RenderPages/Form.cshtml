@@ -6,28 +6,151 @@
 	Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
 
-<!-- PAGE CONTENT-->
-
+<!-- FORM CONTENT-->
 <div class="row">
 	<div id="operation" class="col bg-white">
-		<div class="row">
-			<div class="col">
-				<!--PLAINNIGN SELECT LIST-->
-				<div class="d-flex align-content-center">
-				<label class="me-2" for="safra">Safra:</label>
-				<select class="form-select w-25" aria-label=".form-select-lg" name="safra" id="safra">
-					<option value="1" selected>1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
+		<div class="row align-items-center p-3">
+			<!--PLAINNIGN SELECT LIST-->
+			<label class="w-auto me-2" for="planejamento">Planejamento:</label>
+			<select class="form-select w-25" aria-label=".form-select-lg" name="planejamento" id="planejamento">
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+		</div>
+		<!-- OPERATION DATA -->
+		<div class="row border-top">
+			<div class="col-2 p-1">
+				<div class="row">
+					<label class="d-inline pb-2" for="register-data">Dados Registrados:</label>
+					<select class="form-select" aria-label=".form-select-lg" name="register-data" id="register-data">
+						<option value="dose-teorica" selected>Dose Teórica</option>
+						<option value="dose-real">Dose Real</option>
+						<option value="altitude">Altitude</option>
+						<option value="erro-da-dose">Erro da Dose</option>
+					</select>
+				</div>
+				<!--DADOS REGISTRADOS-->
+				<div class="row mt-5 p-2">
+					<div class="d-inline">
+						<i class="bi bi-square-fill" style="color: #05AABE ;"></i>
+						<span class="ps-2">321.12</span>
+					</div>
+					<div class="d-inline">
+						<i class="bi bi-square-fill" style="color: #81BA83 ;"></i>
+						<span class="ps-2">321.12</span>
+					</div>
+					<div class="d-inline">
+						<i class="bi bi-square-fill" style="color: #00CA00 ;"></i>
+						<span class="ps-2">321.12</span>
+					</div>
+					<div class="d-inline">
+						<i class="bi bi-square-fill" style="color: #EDDB0B ;"></i>
+						<span class="ps-2">321.12</span>
+					</div>
+					<div class="d-inline">
+						<i class="bi bi-square-fill" style="color: #E27A0E ;"></i>
+						<span class="ps-2">321.12</span>
+					</div>
+					<div class="d-inline">
+						<i class="bi bi-square-fill" style="color: #FC5B53 ;"></i>
+						<span class="ps-2">321.12</span>
+					</div>
 				</div>
 			</div>
-			<!-- OPERATION DATA -->
-			<div class="row border-top">
-				<div class="col">
-					<div id="data-operation" class="text-center">
-						<h2>OPERATION DATA</h2>
+			<!--MAP-->
+			<div class="col-4 p-2">
+				<img src="~/images/map-test.png" width="100%" height="100%" />
+			</div>
+			<!--DATA SELECT RADIO-->
+			<div class="col-3 m-1">
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="continua" checked>
+					<label class="form-check-label" for="continua">Contínua</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="continua-resumida">
+					<label class="form-check-label" for="continua-resumida">Contínua Resumida</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente">
+					<label class="form-check-label" for="intermitente">Intermitente</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente-resumida">
+					<label class="form-check-label" for="intermitente-resumida">Intermitente Resumida</label>
+				</div>
+			</div>
+			<!--SAFRA-->
+			<div id="safra-list" class="col border-start">
+				<div class="row border-bottom">
+					<ul class="list-unstyled px-3 my-3">
+						<li class="h5">Safra1</li>
+						<li>Adubação</li>
+						<li>Fazenda Central A- Brauna</li>
+						<li>Produto NPK</li>
+					</ul>
+					<!--GRAPHIC TYPE-->
+				</div>
+				<div class="row px-4 pt-1">
+					<select class="form-select">
+						<option selected>Gráfico por escalas</option>
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+					<button type="submit" class="btn btn-primary mt-1 w-100">Aplicar Escala</button>
+					<div class="mt-2 text-center">
+						<ul id="value" class="list-inline">
+							<li class="list-inline-item">Valor</li>
+							<li class="list-inline-item">0</li>
+							<li class="list-inline-item">a</li>
+							<li class="list-inline-item" style="background-color: #96969E;">0</li>
+							<li class="list-inline-item">0%</li>
+						</ul>
+						<ul id="desde1" class="list-inline">
+							<li class="list-inline-item">Valor</li>
+							<li class="list-inline-item">0</li>
+							<li class="list-inline-item">a</li>
+							<li class="list-inline-item" style="background-color: #00AEB8;">0</li>
+							<li class="list-inline-item">0%</li>
+						</ul>
+						<ul id="desde2" class="list-inline">
+							<li class="list-inline-item">Valor</li>
+							<li class="list-inline-item">0</li>
+							<li class="list-inline-item">a</li>
+							<li class="list-inline-item" style="background-color: #80BC80;">0</li>
+							<li class="list-inline-item">0%</li>
+						</ul>
+						<ul id="desde3" class="list-inline">
+							<li class="list-inline-item">Valor</li>
+							<li class="list-inline-item">0</li>
+							<li class="list-inline-item">a</li>
+							<li class="list-inline-item" style="background-color: #00CC05;">0</li>
+							<li class="list-inline-item">0%</li>
+						</ul>
+						<ul id="desde4" class="list-inline">
+							<li class="list-inline-item">Valor</li>
+							<li class="list-inline-item">0</li>
+							<li class="list-inline-item">a</li>
+							<li class="list-inline-item" style="background-color: #EBDE0C;">0</li>
+							<li class="list-inline-item">0%</li>
+						</ul>
+						<ul id="desde5" class="list-inline">
+							<li class="list-inline-item">Valor</li>
+							<li class="list-inline-item">0</li>
+							<li class="list-inline-item">a</li>
+							<li class="list-inline-item" style="background-color: #EBDE0C;">0</li>
+							<li class="list-inline-item">0%</li>
+						</ul>
+						<ul id="desde6" class="list-inline">
+							<li class="list-inline-item">Valor</li>
+							<li class="list-inline-item">0</li>
+							<li class="list-inline-item">a</li>
+							<li class="list-inline-item" style="background-color: #EBDE0C;">0</li>
+							<li class="list-inline-item">0%</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -37,151 +160,126 @@
 
 <!--OPERATION INFOS-->
 
-<div class="row">
-	<div id="operation-info" class="col my-2">
-		<div class="row h-100 align-content-center">
-			<div class="col bg-white mx-3">
-				<div class="row row-cols-1">
-					<div class="col">
-						<caption>Área</caption>
-						<i class="bi bi-info-circle"></i>
-					</div>
-					<div class="col">
-						<h2>126,560 ha</h2>
-					</div>
-				</div>
+<div class="row my-3">
+	<!--AREA-->
+	<div class="col bg-white border mx-2">
+		<div class="d-inline-flex">
+			<p>Área</p>
+			<i class="bi bi-info-circle"></i>
+		</div>
+		<h3>126,560 ha</h3>
+	</div>
+	<!--TEMPO-->
+	<div class="col bg-white border mx-2">
+		<div class="d-inline-flex">
+			<p>Tempo</p>
+			<i class="bi bi-info-circle"></i>
+		</div>
+		<h3>10h Trabalhada</h3>
+	</div>
+	<!--vELOCIDADE-->
+	<div class="col bg-white border mx-2">
+		<div class="d-inline-flex">
+			<p>Velocidade</p>
+			<i class="bi bi-info-circle"></i>
+		</div>
+		<div class="d-flex justify-content-center">
+			<div class="flex-grow-1">
+				<img src="~/images/plus-minus.svg" width="30px" />
+				<h3>60km</h3>
+				<p>Média</p>
 			</div>
-			<div class="col bg-white mx-3">
-				<div class="row row-cols-1">
-					<div class="col">
-						<caption>Tempo</caption>
-						<i class="bi bi-info-circle"></i>
-					</div>
-					<div class="col">
-						<h2>10h Trabalhada</h2>
-					</div>
-				</div>
-			</div>
-			<div class="col bg-white mx-3">
-				<div class="row row-cols-1">
-					<div class="col">
-						<caption>Velocidade</caption>
-						<i class="bi bi-info-circle"></i>
-					</div>
-					<div class="col">
-						<div class="row">
-							<div class="col">
-								<img src="~/images/plus-minus.svg" width="40px" />
-								<h2>60Km</h2>
-							</div>
-							<div class="col">
-								<img src="~/images/arrow-down.svg" width="40px" />
-								<h2>40Km</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col bg-white mx-3">
-				<div class="row row-cols-1">
-					<div class="col">
-						<caption>Dose</caption>
-						<i class="bi bi-info-circle"></i>
-					</div>
-					<div class="col">
-						<h2>Taxa Variada</h2>
-					</div>
-				</div>
-			</div>
-			<div class="col bg-white mx-3">
-				<div class="row row-cols-1">
-					<div class="col">
-						<caption>Alarmes</caption>
-						<i class="bi bi-info-circle"></i>
-					</div>
-					<div class="col">
-						<h2>5</h2>
-					</div>
-				</div>
+			<div class="flex-grow-1">
+				<img src="~/images/arrow-down.svg" width="30px" />
+				<h3>40km</h3>
+				<p>Mínima</p>
 			</div>
 		</div>
+	</div>
+	<!--DOSE-->
+	<div class="col bg-white border mx-2">
+		<div class="d-inline-flex">
+			<p>Dose</p>
+			<i class="bi bi-info-circle"></i>
+			<h3>Taxa Variada</h3>
+		</div>
+	</div>
+	<!--ALARMES-->
+	<div class="col bg-white border mx-2">
+		<div class="d-inline-flex">
+			<p>Alarmes</p>
+			<i class="bi bi-info-circle"></i>
+		</div>
+		<h3>5</h3>
 	</div>
 </div>
 
 <!--DASHBOARD IDENTITY-->
 
-<div class="row mb-3">
-	<div id="dashboard-identity" class="col bg-white">
-		<div class="row">
-			<div class="col">
-				<h2>Indentidade</h2>
-			</div>
-			<div class="col">
-				<div class="d-flex justify-content-end align-items-center me-4">
-					<label class="me-2" for="id-type">ID:</label>
-					<select class="form-select align-self-stretch" name="id-type" id="safra">
-						<option value="velocity" selected>Velocidade</option>
-						<option value="velocity">Velocidade</option>
-						<option value="velocity">Velocidade</option>
-						<option value="velocity">Velocidade</option>
-					</select>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<table class="table table-md table-bordered table-hover">
-					<thead class="table-light">
-						<tr>
-							<th scope="col">Tipo</th>
-							<th scope="col w-25">Descrição</th>
-							<th scope="col">Latitude</th>
-							<th scope="col">Longitude</th>
-							<th scope="col">Data</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>mdo</td>
-							<td>mdo</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>fat</td>
-							<td>mdo</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>fat</td>
-							<td>mdo</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>fat</td>
-							<td>mdo</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
+<div class="row bg-white p-3">
+	<div class="col">
+		<h3 class="m-0">Indentidade</h3>
+	</div>
+	<!--ID SELECTOR-->
+	<div class="col text-end w-0">
+		<label class="me-2" for="id-type">ID:</label>
+		<select class="d-inline form-select w-25" name="id-type" id="safra">
+			<option value="velocity" selected>Velocidade</option>
+			<option value="velocity">Velocidade</option>
+			<option value="velocity">Velocidade</option>
+			<option value="velocity">Velocidade</option>
+		</select>
+	</div>
+</div>
+
+<!--TABLE IDENTITY-->
+<div class="row">
+	<div class="col">
+		<table class="table table-md table-bordered table-hover">
+			<thead class="table-light">
+				<tr>
+					<th scope="col">Tipo</th>
+					<th scope="col" class="w-25">Descrição</th>
+					<th scope="col">Latitude</th>
+					<th scope="col">Longitude</th>
+					<th scope="col">Data</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>mdo</td>
+					<td>mdo</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>fat</td>
+					<td>mdo</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>fat</td>
+					<td>mdo</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>fat</td>
+					<td>mdo</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
 
 
-<!-- ----- Bootstrap 5.2.0 Js Link Added ----- -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-		crossorigin="anonymous"></script>
-<script src="app.js"></script>
 
 <style>
 
@@ -190,22 +288,4 @@
 		background-color: #FFFF;
 		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
 	}
-
-	.operation-info-shadow {
-		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
-	}
-
-	#data-operation {
-		height: 28rem;
-	}
-
-
-	#operation-info {
-		height: 12rem;
-	}
-
-	#dashboard-identity {
-		height: 28rem;
-	}
-
 </style>

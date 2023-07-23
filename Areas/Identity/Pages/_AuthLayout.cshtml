@@ -1,63 +1,64 @@
 ﻿<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Verion</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Verion.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Verion</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/Verion.styles.css" asp-append-version="true" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- MAIN PAGE -->
-    <div id="main-login" class="row flex-column align-items-center">
-        <!-- LOGO -->
-        <div class="col-11 col-xl-3 col-md-7 col-sm-8 text-center">
-            <img id="main-logo-login-logout" class="img-fluid" src="~/images/logo-verion.png">
-        </div>
-        <!-- LOG IN AND REGISTER MENU -->
-        <div class="col-11 col-xl-3 col-md-7 col-sm-8">
-            <div class="card login-logout-card custom-div">
-                <div class="card-header mb-3">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Identity/Account/Login">Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Identity/Account/Register">Register</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div class="">
-                            @RenderBody()
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- MAIN PAGE -->
+	<div class="auth-container h-100">
+		<!-- LOGO -->
+		<div id="main-login" class="row justify-content-center">
+			<div class="text-center">
+				<img id="main-logo-login-logout" class="img-fluid" src="~/images/logo-verion.png">
+			</div>
+			<!-- LOG IN AND REGISTER MENU -->
+			<div class="card login-logout-card custom-div">
+				<div class="card-header my-3">
+					<ul class="nav nav-tabs card-header-tabs">
+						<li class="nav-item">
+							<a class="nav-link" href="/Identity/Account/Login">Log In</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/Identity/Account/Register">Register</a>
+						</li>
+					</ul>
+				</div>
+				<div class="card-body">
+					<div class="row justify-content-center">
+						<div class="">
+							@RenderBody()
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-    <!-- SRC SCRIPTS -->
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
-    <!-- SCRIPTS -->
-    @* JavaScript - Returns Actieve Member *@
-    <script>
-        $(function () {
-            const currentPage = location.pathname;
-            $('.nav-tabs li a').each(function () {
-                const $this = $(this);
-                if (currentPage.toLowerCase().indexOf($this.attr('href').toLowerCase()) !== -1) {
-                    $this.addClass('active');
-                }
-            })
-        })
-    </script>
-    @await RenderSectionAsync("Scripts", required: false)
+	<!-- SRC SCRIPTS -->
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+
+	<!-- SCRIPTS -->
+	@* JavaScript - Returns Actieve Member *@
+	<script>
+		$(function () {
+			const currentPage = location.pathname;
+			$('.nav-tabs li a').each(function () {
+				const $this = $(this);
+				if (currentPage.toLowerCase().indexOf($this.attr('href').toLowerCase()) !== -1) {
+					$this.addClass('active');
+				}
+			})
+		})
+	</script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
