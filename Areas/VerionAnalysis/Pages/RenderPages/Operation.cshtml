@@ -6,12 +6,11 @@
     Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
 
-
 <!-- Crop & Filters Menu -->
 <div class="mt-3 mb-3">
     <!-- Crop Selection -->
-    <div class="d-flex align-items-center justify-content-center px-3">
-        <label id="operation-filters" class="pe-3" for="crop">Safra:</label>
+    <div class="d-flex align-items-center px-3">
+        <label id="operation-filters-first" class="operation-filters" for="crop">Safra:</label>
         <select class="form-select w-30" name="safra" id="safra">
             <option class="dropdown-content" value="1" selected>Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
             <option class="dropdown-content" value="2">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
@@ -19,7 +18,7 @@
             <option class="dropdown-content" value="4">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
         </select> <!-- Crop Selection /> -->
         <!-- State Filters -->
-        <label id="operation-filters" class="pe-3 ps-3" for="filter">Aplicação:</label>
+        <label id="" class="operation-filters" for="filter">Aplicação:</label>
         <select class="form-select w-25" name="application-filter" id="application-filter">
             <option class="dropdown-content" value="1" selected>Application</option>
             <option class="dropdown-content" value="2">fExFertilization</option>
@@ -28,7 +27,7 @@
             <option class="dropdown-content" value="4">fExHarvest</option>
         </select> <!-- State Filters /> -->
         <!-- Application Filters -->
-        <label id="operation-filters" class="" for="filter">Situação:</label>
+        <label id="" class="operation-filters" for="filter">Situação:</label>
         <select class="form-select w-25" name="state-filter" id="state-filter">
             <option class="dropdown-content" value="1" selected>State</option>
             <option class="dropdown-content" value="2">fExActive</option>
@@ -41,7 +40,7 @@
 <!-- Operation Board -->
 <div id="info-menu">
     <!-- Operation Header -->
-    <h1 class="monitoring-header">Monitoramento</h1> <!-- Header -->
+    <h1 class="monitoring-header"><i class="fa fa-desktop"></i> Monitoramento</h1> <!-- Header -->
     <div class="d-flex justify-content-end">
         <a name="add" id="item-add" class="add-remove-btn btn btn-primary" href="#" role="button"><i class="fa fa-plus" aria-hidden="true"></i> Adicionar </a> <!-- add -->
         <a name="remove" id="item-remove" class="add-remove-btn btn btn-primary" href="#" role="button"><i class="fa fa-minus" aria-hidden="true"></i> Remover </a> <!-- remove -->
