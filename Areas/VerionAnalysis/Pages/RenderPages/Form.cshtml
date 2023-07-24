@@ -2,283 +2,323 @@
 @using Verion.Areas.VerionAnalysis.Pages.RenderPages;
 @model FormModel
 @{
-	ViewData["Title"] = "Application";
-	Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
+    ViewData["Title"] = "Application";
+    Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
 
-<!-- FORM CONTENT-->
 
-	<div id="operation" class="col bg-white py-3">
-		<div class="row align-items-center p-3">
-			<!--PLAINNIGN SELECT LIST-->
-			<label class="w-auto me-2" for="planejamento">Planejamento:</label>
-			<select class="form-select w-25" aria-label=".form-select-lg" name="planejamento" id="planejamento">
-				<option value="1" selected>1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-			</select>
-		</div>
-		<!-- OPERATION DATA -->
-		<div class="row border-top">
-			<div class="col-2 p-1">
-				<div class="ps-2">
-					<label class="d-inline pb-2" for="register-data">Dados Registrados:</label>
-					<select class="form-select" aria-label=".form-select-lg" name="register-data" id="register-data">
-						<option value="dose-teorica" selected>Dose Teórica</option>
-						<option value="dose-real">Dose Real</option>
-						<option value="altitude">Altitude</option>
-						<option value="erro-da-dose">Erro da Dose</option>
-					</select>
-				</div>
-				<!--DADOS REGISTRADOS-->
-				<div class="row p-2 align-content-center mt-5">
-					<div class="d-inline">
-						<i class="bi bi-square-fill" style="color: #05AABE ;"></i>
-						<span class="ps-2">321.12</span>
-					</div>
-					<div class="d-inline">
-						<i class="bi bi-square-fill" style="color: #81BA83 ;"></i>
-						<span class="ps-2">321.12</span>
-					</div>
-					<div class="d-inline">
-						<i class="bi bi-square-fill" style="color: #00CA00 ;"></i>
-						<span class="ps-2">321.12</span>
-					</div>
-					<div class="d-inline">
-						<i class="bi bi-square-fill" style="color: #EDDB0B ;"></i>
-						<span class="ps-2">321.12</span>
-					</div>
-					<div class="d-inline">
-						<i class="bi bi-square-fill" style="color: #E27A0E ;"></i>
-						<span class="ps-2">321.12</span>
-					</div>
-					<div class="d-inline">
-						<i class="bi bi-square-fill" style="color: #FC5B53 ;"></i>
-						<span class="ps-2">321.12</span>
-					</div>
-				</div>
-			</div>
-			<!--MAP-->
-			<div class="col-4 p-2">
-				<img src="~/images/map-test.png" width="100%" height="100%" />
-			</div>
-			<!--DATA SELECT RADIO-->
-			<div id="data-select-radio" class="col-3 m-1">
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="flexRadioDefault" id="continua" checked>
-					<label class="form-check-label" for="continua">Contínua</label>
-				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="flexRadioDefault" id="continua-resumida">
-					<label class="form-check-label" for="continua-resumida">Contínua Resumida</label>
-				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente">
-					<label class="form-check-label" for="intermitente">Intermitente</label>
-				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente-resumida">
-					<label class="form-check-label" for="intermitente-resumida">Intermitente Resumida</label>
-				</div>
-			</div>
-			<!--SAFRA-->
-			<div id="safra-list" class="col border-start">
-				<div class="row border-bottom">
-					<ul class="list-unstyled px-3 my-3">
-						<li class="h5">Safra1</li>
-						<li>Adubação</li>
-						<li>Fazenda Central A- Brauna</li>
-						<li>Produto NPK</li>
-					</ul>
-					<!--GRAPHIC TYPE-->
-				</div>
-				<div class="row px-4 pt-1">
-					<select class="form-select">
-						<option selected>Gráfico por escalas</option>
-						<option value="1">One</option>
-						<option value="2">Two</option>
-						<option value="3">Three</option>
-					</select>
-					<button type="submit" class="btn btn-primary mt-1 w-100">Aplicar Escala</button>
-					<div class="mt-2 text-center">
-						<ul id="value" class="list-inline">
-							<li class="list-inline-item">Valor</li>
-							<li class="list-inline-item">0</li>
-							<li class="list-inline-item">a</li>
-							<li class="list-inline-item" style="background-color: #96969E;">0</li>
-							<li class="list-inline-item">0%</li>
-						</ul>
-						<ul id="desde1" class="list-inline">
-							<li class="list-inline-item">Valor</li>
-							<li class="list-inline-item">0</li>
-							<li class="list-inline-item">a</li>
-							<li class="list-inline-item" style="background-color: #00AEB8;">0</li>
-							<li class="list-inline-item">0%</li>
-						</ul>
-						<ul id="desde2" class="list-inline">
-							<li class="list-inline-item">Valor</li>
-							<li class="list-inline-item">0</li>
-							<li class="list-inline-item">a</li>
-							<li class="list-inline-item" style="background-color: #80BC80;">0</li>
-							<li class="list-inline-item">0%</li>
-						</ul>
-						<ul id="desde3" class="list-inline">
-							<li class="list-inline-item">Valor</li>
-							<li class="list-inline-item">0</li>
-							<li class="list-inline-item">a</li>
-							<li class="list-inline-item" style="background-color: #00CC05;">0</li>
-							<li class="list-inline-item">0%</li>
-						</ul>
-						<ul id="desde4" class="list-inline">
-							<li class="list-inline-item">Valor</li>
-							<li class="list-inline-item">0</li>
-							<li class="list-inline-item">a</li>
-							<li class="list-inline-item" style="background-color: #EBDE0C;">0</li>
-							<li class="list-inline-item">0%</li>
-						</ul>
-						<ul id="desde5" class="list-inline">
-							<li class="list-inline-item">Valor</li>
-							<li class="list-inline-item">0</li>
-							<li class="list-inline-item">a</li>
-							<li class="list-inline-item" style="background-color: #EBDE0C;">0</li>
-							<li class="list-inline-item">0%</li>
-						</ul>
-						<ul id="desde6" class="list-inline">
-							<li class="list-inline-item">Valor</li>
-							<li class="list-inline-item">0</li>
-							<li class="list-inline-item">a</li>
-							<li class="list-inline-item" style="background-color: #EBDE0C;">0</li>
-							<li class="list-inline-item">0%</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- Planning Menu -->
+<div class="mt-3 mb-3">
+    <!-- Planning Selection -->
+    <div class="d-flex align-items-center px-3">
+        <label id="operation-filters-first" class="operation-filters cols-6" for="crop">Planejamento:</label>
+        <select class="form-select w-30" name="safra" id="safra">
+            <option class="dropdown-content" value="1" selected>Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="2">Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="3">Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="4">Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+        </select> <!-- Planning Selection /> -->
+    </div>
+</div> <!-- Planning Menu /> -->
+<!-- OPERATION DATA -->
+<div id="info-menu" class="d-flex justify-content-between">
+    <div class="col-3 p-1">
+        <div class="report-item border-bottom">
+            <ul class="list-unstyled px-3 my-3">
+                <li>Safra: Crop+Name</li>
+                <li>Local: Fazenda Central A - Brauna</li>
+                <li>Aplicação: Adubação</li>
+                <li>Produto: NPK</li>
+            </ul>
+        </div>
+        <!-- Register Options  -->
+        <div class="ps-2">
+            <!--DATA SELECT RADIO-->
+            <div id="data-select-radio" class="m-1">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="continua" checked>
+                    <label class="form-check-label" for="continua">Contínua</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="continua-resumida">
+                    <label class="form-check-label" for="continua-resumida">Contínua Resumida</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente">
+                    <label class="form-check-label" for="intermitente">Intermitente</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente-resumida">
+                    <label class="form-check-label" for="intermitente-resumida">Intermitente Resumida</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="pontual">
+                    <label class="form-check-label" for="pontual">Pontual</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="pontual-resumida">
+                    <label class="form-check-label" for="pontual-resumida">Pontual Resumida</label>
+                </div>
+            </div>
+
+        </div> <!-- Register Options /> -->
+        <!-- Scale Options -->
+        <div class="ps-2 pt-1">
+            <select class="form-select">
+                <option selected>Gráfico por escalas</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <button type="submit" class="btn btn-primary mt-1 w-100">Aplicar Escala</button>
+        </div>
+
+        <!-- Scale Measure -->
+        <div class="d-flex justify-content-center">
+            <div class="m-3 text-center">
+                <ul id="value" class="list-inline">
+                    <li class="list-inline-item">Valor</li>
+                    <li class="list-inline-item">0</li>
+                    <li class="list-inline-item">a</li>
+                    <li class="list-inline-item" style="background-color: #96969E;">0</li>
+                    <li class="list-inline-item">0%</li>
+                </ul>
+                <ul id="desde1" class="list-inline">
+                    <li class="list-inline-item">Valor</li>
+                    <li class="list-inline-item">0</li>
+                    <li class="list-inline-item">a</li>
+                    <li class="list-inline-item" style="background-color: #00AEB8;">0</li>
+                    <li class="list-inline-item">0%</li>
+                </ul>
+                <ul id="desde2" class="list-inline">
+                    <li class="list-inline-item">Valor</li>
+                    <li class="list-inline-item">0</li>
+                    <li class="list-inline-item">a</li>
+                    <li class="list-inline-item" style="background-color: #80BC80;">0</li>
+                    <li class="list-inline-item">0%</li>
+                </ul>
+                <ul id="desde3" class="list-inline">
+                    <li class="list-inline-item">Valor</li>
+                    <li class="list-inline-item">0</li>
+                    <li class="list-inline-item">a</li>
+                    <li class="list-inline-item" style="background-color: #00CC05;">0</li>
+                    <li class="list-inline-item">0%</li>
+                </ul>
+                <ul id="desde4" class="list-inline">
+                    <li class="list-inline-item">Valor</li>
+                    <li class="list-inline-item">0</li>
+                    <li class="list-inline-item">a</li>
+                    <li class="list-inline-item" style="background-color: #EBDE0C;">0</li>
+                    <li class="list-inline-item">0%</li>
+                </ul>
+                <ul id="desde5" class="list-inline">
+                    <li class="list-inline-item">Valor</li>
+                    <li class="list-inline-item">0</li>
+                    <li class="list-inline-item">a</li>
+                    <li class="list-inline-item" style="background-color: #E27A0E;">0</li>
+                    <li class="list-inline-item">0%</li>
+                </ul>
+                <ul id="desde6" class="list-inline">
+                    <li class="list-inline-item">Valor</li>
+                    <li class="list-inline-item">0</li>
+                    <li class="list-inline-item">a</li>
+                    <li class="list-inline-item" style="background-color: #FC5B53;">0</li>
+                    <li class="list-inline-item">0%</li>
+                </ul>
+            </div> <!-- Scale Options /> -->
+        </div>
+
+        <!--DADOS REGISTRADOS-->
+
+
+
+    </div>
+    <!--MAP-->
+    <div class="position-relative col-9 p-2">
+        <div class="m-3 position-absolute">
+            <label class="" for="register-data">Dados Registrados:</label>
+            <select class="form-select" aria-label=".form-select-lg" name="register-data" id="register-data">
+                <option value="dose-teorica" selected>Dose Teórica</option>
+                <option value="dose-real">Dose Real</option>
+                <option value="altitude">Altitude</option>
+                <option value="erro-da-dose">Erro da Dose</option>
+            </select>
+        </div>
+                <div class="position-absolute bottom-0 mb-3 align-content-center">
+                    <div class="m-3">
+                        <i class="bi bi-square-fill" style="color: #96969E ;"></i>
+                        <span class="ps-2">321.12</span>
+                    </div>
+                    <div class="m-3">
+                        <i class="bi bi-square-fill" style="color: #05AABE ;"></i>
+                        <span class="ps-2">321.12</span>
+                    </div>
+                    <div class="m-3">
+                        <i class="bi bi-square-fill" style="color: #81BA83 ;"></i>
+                        <span class="ps-2">321.12</span>
+                    </div>
+                    <div class="m-3">
+                        <i class="bi bi-square-fill" style="color: #00CA00 ;"></i>
+                        <span class="ps-2">321.12</span>
+                    </div>
+                    <div class="m-3">
+                        <i class="bi bi-square-fill" style="color: #EDDB0B ;"></i>
+                        <span class="ps-2">321.12</span>
+                    </div>
+                    <div class="m-3">
+                        <i class="bi bi-square-fill" style="color: #E27A0E ;"></i>
+                        <span class="ps-2">321.12</span>
+                    </div>
+                    <div class="m-3">
+                        <i class="bi bi-square-fill" style="color: #FC5B53 ;"></i>
+                        <span class="ps-2">321.12</span>
+                    </div>
+            </div>
+        <img src="~/images/map-test.png" width="100%" height="100%" />
+    </div>
+    <!--SAFRA-->
+</div>
 
 <!--OPERATION INFOS-->
 
 <div class="d-flex justify-content-between">
-	<!--AREA-->
-	<div class="col bg-white border p-2">
-		<div class="d-flex align-items-center justify-content-between p-3">
-		<p class="m-0">Área</p>
-		<i class="bi bi-info-circle"></i>
-		</div>
-		<p id="area-data" class="text-center h4 py-2">126,560 ha</p>
-	</div>
-	<!--TEMPO-->
-	<div class="col bg-white border p-2">
-		<div class="d-flex align-items-center justify-content-between text-center p-3">
-			<p class="m-0">Tempo</p>
-			<i class="bi bi-info-circle"></i>
-		</div>
-		<p id="tempo-data" class="text-center h4 py-2">10h Trabalhada</p>
-	</div>
-	<!--vELOCIDADE-->
-	<div class="col bg-white border p-2">
-		<div class="d-flex align-items-center justify-content-between text-center p-3">
-			<p class="m-0">Velocidade</p>
-			<i class="bi bi-info-circle"></i>
-		</div>
-		<!--DATA VELOCIDADE-->
-		<p id="velocidade-data" class="text-center h4 py-2 ">126,560 ha</p>
-	</div>
-	<!--DOSE-->
-	<div class="col bg-white border p-2">
-		<div class="d-flex align-items-center justify-content-between text-center p-3">
-			<p class="m-0">Área</p>
-			<i class="bi bi-info-circle"></i>
-		</div>
-		<p id="dose-data" class="text-center h4 py-2">Taxa Variada</p>
-	</div>
-	<!--ALARMES-->
-	<div class="col bg-white border p-2">
-		<div class="d-flex align-items-center justify-content-between text-center p-3">
-			<p class="m-0">Alarme</p>
-			<i class="bi bi-info-circle"></i>
-		</div>
-		<p id="alarme-data" class="text-center h4 py-2">5</p>
-	</div>
+    <!--AREA-->
+    <div class="col bg-white border p-2">
+        <div class="d-flex align-items-center justify-content-between p-3">
+            <p class="m-0">Área</p>
+            <i class="bi bi-info-circle"></i>
+        </div>
+        <p id="area-data" class="text-center h4 py-2">126,560 ha</p>
+    </div>
+    <!--TEMPO-->
+    <div class="col bg-white border p-2">
+        <div class="d-flex align-items-center justify-content-between text-center p-3">
+            <p class="m-0">Tempo</p>
+            <i class="bi bi-info-circle"></i>
+        </div>
+        <p id="tempo-data" class="text-center h4 py-2">10h Trabalhada</p>
+    </div>
+    <!--VELOCIDADE-->
+    <div class="col bg-white border p-1">
+        <div class="d-flex align-items-center justify-content-between p-3">
+            <p class="m-0">Velocidade</p>
+            <i class="bi bi-info-circle"></i>
+        </div>
+        <!--DATA VELOCIDADE-->
+        <div class="row align-items-center justify-content-center">
+            <div class="d-flex col-6">
+                <div class="d-flex flex-column justify-content-center">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center p-0 m-0">
+                    <p>60Km</p>
+                    <p>Média</p>
+                </div>
+            </div>
+
+            <div class="d-flex col-6 justify-content-center">
+                <div class="d-flex flex-column justify-content-center">
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                </div>
+                <div class="d-flex align-items-center p-0 m-0">
+                    <p class="h6">40Km</p>
+                    <p>Mínima</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DOSE-->
+    <div class="col bg-white border p-2">
+        <div class="d-flex align-items-center justify-content-between text-center p-3">
+            <p class="m-0">Área</p>
+            <i class="bi bi-info-circle"></i>
+        </div>
+        <p id="dose-data" class="text-center h4 py-2">Taxa Variada</p>
+    </div>
+    <!--ALARMES-->
+    <div class="col bg-white border p-2">
+        <div class="d-flex align-items-center justify-content-between text-center p-3">
+            <p class="m-0">Alarme</p>
+            <i class="bi bi-info-circle"></i>
+        </div>
+        <p id="alarme-data" class="text-center h4 py-2">5</p>
+    </div>
 </div>
 <!--DASHBOARD IDENTITY-->
 
-<div class="bg-white p-3">
-	<div class="col">
-		<h3 class="m-0">Indentidade</h3>
-	</div>
-	<!--ID SELECTOR-->
-	<div class="col text-end w-0">
-		<label class="me-2" for="id-type">ID:</label>
-		<select class="d-inline form-select w-25" name="id-type" id="safra">
-			<option value="velocity" selected>Velocidade</option>
-			<option value="velocity">Velocidade</option>
-			<option value="velocity">Velocidade</option>
-			<option value="velocity">Velocidade</option>
-		</select>
-	</div>
+<div class="d-inline-flex bg-white p-3 w-100 justify-content-between">
+    <h3 class="m-0">Indentidade</h3>
+    <!--ID SELECTOR-->
+    <div class="d-inline-flex align-items-center">
+        <label class="me-3" for="id-type">ID:</label>
+        <select class="d-inline form-select" name="id-type" id="safra">
+            <option value="velocity" selected>Velocidade</option>
+            <option value="velocity">Velocidade</option>
+            <option value="velocity">Velocidade</option>
+            <option value="velocity">Velocidade</option>
+        </select>
+    </div>
 </div>
 
 <!--TABLE IDENTITY-->
 <div class="row">
-	<div class="col">
-		<table class="table table-md table-bordered table-hover">
-			<thead class="table-light">
-				<tr>
-					<th scope="col">Tipo</th>
-					<th scope="col" class="w-25">Descrição</th>
-					<th scope="col">Latitude</th>
-					<th scope="col">Longitude</th>
-					<th scope="col">Data</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>mdo</td>
-					<td>mdo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>fat</td>
-					<td>mdo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>fat</td>
-					<td>mdo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>fat</td>
-					<td>mdo</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+    <div class="col">
+        <table class="table table-md table-bordered table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Tipo</th>
+                    <th scope="col" class="w-25">Descrição</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>mdo</td>
+                    <td>mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>fat</td>
+                    <td>mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>fat</td>
+                    <td>mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>fat</td>
+                    <td>mdo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-
-
 
 <style>
 
-	#operation,
-	#dashboard-identity {
-		background-color: #FFFF;
-		box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
-	}
+    #operation,
+    #dashboard-identity {
+        background-color: #FFFF;
+        box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
+    }
 
-		.form-check input {
-			border: 1px solid var(--bs-gray-400)
-		}
+    .form-check input {
+        border: 1px solid var(--bs-gray-400)
+    }
 
 </style>
