@@ -61,7 +61,7 @@
 		</div>
 		<!--MAP-->
 		<div class="col-4 p-2">
-			<img src="~/images/map-test.png" width="100%" height="100%" />
+			<img id="data-map" src="~/images/map-test.png" />
 		</div>
 		<!--DATA SELECT RADIO-->
 		<div id="data-select-radio" class="col-3 m-1">
@@ -83,7 +83,7 @@
 			</div>
 		</div>
 		<!--SAFRA-->
-		<div id="safra-list" class="col border-start">
+		<div id="safra-list" class="col border-start ps-0">
 			<div class="border-bottom">
 				<ul class="list-unstyled px-3 my-3">
 					<li class="h5">Safra1</li>
@@ -300,6 +300,11 @@
 
 	.container-operation-info > div {
 		margin: 6px 6px 6px 0;
+	}
+
+	#data-map {
+		width: 100%;
+		height: 100%;
 	}
 
 </style>
