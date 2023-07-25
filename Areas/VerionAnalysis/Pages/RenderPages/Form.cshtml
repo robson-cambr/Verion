@@ -7,73 +7,72 @@
 }
 
 
-<!-- Planning Menu -->
+<!-- Report -->
+<!-- Report Selection -->
 <div class="mt-3 mb-3">
-    <!-- Planning Selection -->
+    
     <div class="d-flex align-items-center px-3">
         <label id="operation-filters-first" class="operation-filters cols-6" for="crop">Planejamento:</label>
-        <select class="form-select w-30" name="safra" id="safra">
+        <select class="form-select" name="safra" id="safra">
             <option class="dropdown-content" value="1" selected>Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
             <option class="dropdown-content" value="2">Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
             <option class="dropdown-content" value="3">Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
             <option class="dropdown-content" value="4">Crop+Name+Application+Status+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
-        </select> <!-- Planning Selection /> -->
+        </select>
     </div>
-</div> <!-- Planning Menu /> -->
-<!-- OPERATION DATA -->
-<div id="info-menu" class="d-flex justify-content-between">
-    <div class="col-3 p-1">
-        <div class="report-item border-bottom">
-            <ul class="list-unstyled px-3 my-3">
-                <li>Safra: Crop+Name</li>
-                <li>Local: Fazenda Central A - Brauna</li>
-                <li>Aplicação: Adubação</li>
-                <li>Produto: NPK</li>
+</div>  <!-- Report Selection /> -->
+<!-- Report Display -->
+<div id="info-menu" class="d-flex report-main">
+    <!-- Info Report Selected  - Start -->
+    <div class="col-3 report-info">
+        <div class="">
+            <ul class="info-selected-report list-unstyled">
+                <li><span>Safra: </span>Crop+Name</li>
+                <li><span>Local: </span>Fazenda Central A - Brauna</li>
+                <li><span>Aplicação: </span>Adubação</li>
+                <li><span>Produto: </span>NPK</li>
             </ul>
         </div>
-        <!-- Register Options  -->
-        <div class="ps-2">
-            <!--DATA SELECT RADIO-->
-            <div id="data-select-radio" class="m-1">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="continua" checked>
-                    <label class="form-check-label" for="continua">Contínua</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="continua-resumida">
-                    <label class="form-check-label" for="continua-resumida">Contínua Resumida</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente">
-                    <label class="form-check-label" for="intermitente">Intermitente</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente-resumida">
-                    <label class="form-check-label" for="intermitente-resumida">Intermitente Resumida</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="pontual">
-                    <label class="form-check-label" for="pontual">Pontual</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="pontual-resumida">
-                    <label class="form-check-label" for="pontual-resumida">Pontual Resumida</label>
-                </div>
+        <!-- Info Report Selected /> -->
+        <!-- Telemetry Options -->
+        <div id="data-select-ratio" class="report-select-ratio">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="continua" checked>
+                <label class="form-check-label" for="continua">Contínua</label>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="continua-resumida">
+                <label class="form-check-label" for="continua-resumida">Contínua Resumida</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente">
+                <label class="form-check-label" for="intermitente">Intermitente</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="intermitente-resumida">
+                <label class="form-check-label" for="intermitente-resumida">Intermitente Resumida</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="pontual">
+                <label class="form-check-label" for="pontual">Pontual</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="pontual-resumida">
+                <label class="form-check-label" for="pontual-resumida">Pontual Resumida</label>
+            </div>
+        </div> <!-- Telemetry Options /> -->
 
-        </div> <!-- Register Options /> -->
         <!-- Scale Options -->
-        <div class="ps-2 pt-1">
+        <div class="">
             <select class="form-select">
-                <option selected>Gráfico por escalas</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option class="dropdown-content" selected>Gráfico por escalas</option>
+                <option class="dropdown-content" value="1">fExGraphic+Type+One</option>
+                <option class="dropdown-content" value="2">fExGraphic+Type+Two</option>
+                <option class="dropdown-content" value="3">fExGraphic+Type+Three</option>
             </select>
-            <button type="submit" class="btn btn-primary mt-1 w-100">Aplicar Escala</button>
-        </div>
+        </div> <!-- Scale Options /> -->
 
-        <!-- Scale Measure -->
+        <!-- Measure  -->
         <div class="d-flex justify-content-center">
             <div class="m-3 text-center">
                 <ul id="value" class="list-inline">
@@ -125,126 +124,138 @@
                     <li class="list-inline-item" style="background-color: #FC5B53;">0</li>
                     <li class="list-inline-item">0%</li>
                 </ul>
-            </div> <!-- Scale Options /> -->
-        </div>
-
-        <!--DADOS REGISTRADOS-->
-
-
-
-    </div>
-    <!--MAP-->
-    <div class="position-relative col-9 p-2">
-        <div class="m-3 position-absolute">
-            <label class="" for="register-data">Dados Registrados:</label>
-            <select class="form-select" aria-label=".form-select-lg" name="register-data" id="register-data">
-                <option value="dose-teorica" selected>Dose Teórica</option>
-                <option value="dose-real">Dose Real</option>
-                <option value="altitude">Altitude</option>
-                <option value="erro-da-dose">Erro da Dose</option>
-            </select>
-        </div>
-                <div class="position-absolute bottom-0 mb-3 align-content-center">
-                    <div class="m-3">
-                        <i class="bi bi-square-fill" style="color: #96969E ;"></i>
-                        <span class="ps-2">321.12</span>
-                    </div>
-                    <div class="m-3">
-                        <i class="bi bi-square-fill" style="color: #05AABE ;"></i>
-                        <span class="ps-2">321.12</span>
-                    </div>
-                    <div class="m-3">
-                        <i class="bi bi-square-fill" style="color: #81BA83 ;"></i>
-                        <span class="ps-2">321.12</span>
-                    </div>
-                    <div class="m-3">
-                        <i class="bi bi-square-fill" style="color: #00CA00 ;"></i>
-                        <span class="ps-2">321.12</span>
-                    </div>
-                    <div class="m-3">
-                        <i class="bi bi-square-fill" style="color: #EDDB0B ;"></i>
-                        <span class="ps-2">321.12</span>
-                    </div>
-                    <div class="m-3">
-                        <i class="bi bi-square-fill" style="color: #E27A0E ;"></i>
-                        <span class="ps-2">321.12</span>
-                    </div>
-                    <div class="m-3">
-                        <i class="bi bi-square-fill" style="color: #FC5B53 ;"></i>
-                        <span class="ps-2">321.12</span>
-                    </div>
             </div>
-        <img src="~/images/map-test.png" width="100%" height="100%" />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Aplicar Escala</button>
+        <!-- Measure /> -->
     </div>
-    <!--SAFRA-->
-</div>
 
-<!--OPERATION INFOS-->
+    <!-- Info Report Selected  - Center -->
+    <div class="col-9 ">
+        <div class="col-3 report-info position-absolute">
+            <!-- Collected Data -->
+            <div class="d-flex align-items-center">
+                <label class="operation-filters" for="register-data">Dados Registrados:</label>
+                <select class="form-select w-50" name="register-data" id="register-data">
+                    <option class="dropdown-content" value="theoretical-dosage" selected>Dosagem Teórica</option>
+                    <option class="dropdown-content" value="real-dosage">Dosagem Real</option>
+                    <option class="dropdown-content" value="dosage-error">Erro de Dosagem</option>
+                    <option class="dropdown-content" value="area-height">Altitude</option>
+                </select>
+            </div> <!-- Collected Data /> -->
+            <!-- Reference - Intensity -->
+            <div class="">
+                <div class="m-3">
+                    <i class="bi bi-square-fill" style="color: #96969E ;"></i>
+                    <span class="ps-2">321.12</span>
+                </div>
+                <div class="m-3">
+                    <i class="bi bi-square-fill" style="color: #05AABE ;"></i>
+                    <span class="ps-2">321.12</span>
+                </div>
+                <div class="m-3">
+                    <i class="bi bi-square-fill" style="color: #81BA83 ;"></i>
+                    <span class="ps-2">321.12</span>
+                </div>
+                <div class="m-3">
+                    <i class="bi bi-square-fill" style="color: #00CA00 ;"></i>
+                    <span class="ps-2">321.12</span>
+                </div>
+                <div class="m-3">
+                    <i class="bi bi-square-fill" style="color: #EDDB0B ;"></i>
+                    <span class="ps-2">321.12</span>
+                </div>
+                <div class="m-3">
+                    <i class="bi bi-square-fill" style="color: #E27A0E ;"></i>
+                    <span class="ps-2">321.12</span>
+                </div>
+                <div class="m-3">
+                    <i class="bi bi-square-fill" style="color: #FC5B53 ;"></i>
+                    <span class="ps-2">321.12</span>
+                </div>
+            </div> <!-- Reference - Intensity /> -->
+        </div> <!-- Info Report Selected  - Center  /> -->
+        <!-- Crop - Area Data -->
+        <div class="">
+            <img class="report-output-img" src="~/images/telemetry-reference.png" />
+        </div> <!-- Crop - Area Data /> -->
+    </div>
+    
 
+</div> <!-- Report Display /> -->
+
+<!-- Report Additional Info -->
 <div class="d-flex justify-content-between">
-    <!--AREA-->
-    <div class="col bg-white border p-2">
-        <div class="d-flex align-items-center justify-content-between p-3">
-            <p class="m-0">Área</p>
-            <i class="bi bi-info-circle"></i>
+    <!-- Area -->
+    <div id="report-additional-info-first" class="report-additional-info col">
+        <div class="report-additional-description justify-content-between">
+            <p>Área</p>
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
         </div>
-        <p id="area-data" class="text-center h4 py-2">126,560 ha</p>
-    </div>
-    <!--TEMPO-->
-    <div class="col bg-white border p-2">
-        <div class="d-flex align-items-center justify-content-between text-center p-3">
-            <p class="m-0">Tempo</p>
-            <i class="bi bi-info-circle"></i>
+        <p id="area-data" class="h4 text-center">126,560 ha</p>
+    </div> <!-- Area /> -->
+    <!-- Elapsed Time -->
+    <div class="report-additional-info col">
+        <div class="report-additional-description justify-content-between">
+            <p>Tempo</p>
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
         </div>
-        <p id="tempo-data" class="text-center h4 py-2">10h Trabalhada</p>
-    </div>
-    <!--VELOCIDADE-->
-    <div class="col bg-white border p-1">
-        <div class="d-flex align-items-center justify-content-between p-3">
-            <p class="m-0">Velocidade</p>
-            <i class="bi bi-info-circle"></i>
-        </div>
-        <!--DATA VELOCIDADE-->
-        <div class="row align-items-center justify-content-center">
-            <div class="d-flex col-6">
-                <div class="d-flex flex-column justify-content-center">
+        <p id="tempo-data" class="h4 text-center">10h Trabalhada</p>
+    </div> <!-- Elapsed Time /> -->
+    <!-- Velocity -->
+    <!--DATA VELOCIDADE-->
+    <div class="report-additional-info col">
+        <div class="row justify-content-center">
+            <!--VELOCIDADE-->
+            <div class="col-12">
+                <div class="report-additional-description d-flex justify-content-between">
+                    <p>Velocidade</p>
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-1 p-0 align-self-center">
+                <div class="d-flex flex-column justify-content-center px-2 pb-3">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <i class="fa fa-minus" aria-hidden="true"></i>
                 </div>
-
+            </div>
+            <!--VELOCIDADE MEDIA-->
+            <div class="col-4 p-0">
                 <div class="d-flex flex-column justify-content-center align-items-center p-0 m-0">
-                    <p>60Km</p>
-                    <p>Média</p>
+                    <p class="m-0">60Km</p>
+                    <p class="mt-1">Média</p>
                 </div>
             </div>
-
-            <div class="d-flex col-6 justify-content-center">
-                <div class="d-flex flex-column justify-content-center">
+            <!--VELOCIDADE ALTA-->
+            <div class="col-1 p-0 align-self-center">
+                <div class="d-flex px-2 pb-4">
                     <i class="fa fa-arrow-down" aria-hidden="true"></i>
                 </div>
-                <div class="d-flex align-items-center p-0 m-0">
-                    <p class="h6">40Km</p>
-                    <p>Mínima</p>
+            </div>
+            <div class="col-4 p-0">
+                <div class="d-flex flex-column align-items-center p-0 m-0">
+                    <p class="m-0">40Km</p>
+                    <p class="mt-1">Mínima</p>
                 </div>
             </div>
         </div>
     </div>
-    <!--DOSE-->
-    <div class="col bg-white border p-2">
-        <div class="d-flex align-items-center justify-content-between text-center p-3">
-            <p class="m-0">Área</p>
-            <i class="bi bi-info-circle"></i>
+    <!-- Dosage -->
+    <div class="report-additional-info col">
+        <div class="report-additional-description justify-content-between">
+            <p>Área</p>
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
         </div>
-        <p id="dose-data" class="text-center h4 py-2">Taxa Variada</p>
-    </div>
-    <!--ALARMES-->
-    <div class="col bg-white border p-2">
-        <div class="d-flex align-items-center justify-content-between text-center p-3">
-            <p class="m-0">Alarme</p>
-            <i class="bi bi-info-circle"></i>
+        <p id="dose-data" class="h4 text-center">Taxa Variada</p>
+    </div> <!-- Dosage /> -->
+    <!-- Alarms -->
+    <div id="report-additional-info-last" class="report-additional-info col">
+        <div class="report-additional-description justify-content-between">
+            <p>Alarme</p>
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
         </div>
-        <p id="alarme-data" class="text-center h4 py-2">5</p>
-    </div>
+        <p id="alarme-data" class="h4 text-center">5</p>
+    </div> <!-- Alarms /> -->
 </div>
 <!--DASHBOARD IDENTITY-->
 
