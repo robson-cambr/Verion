@@ -10,7 +10,7 @@
 <div class="mt-3 mb-3">
     <!-- Crop Selection -->
     <div class="d-flex align-items-center px-3">
-        <label id="operation-filters-first" class="operation-filters" for="crop">Safra:</label>
+        <label id="analysis-filter-first" class="analysis-filter" for="crop">Safra:</label>
         <select class="form-select w-50" name="safra" id="safra">
             <option class="dropdown-content" value="1" selected>fExCrop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
             <option class="dropdown-content" value="2">fExCrop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
@@ -18,7 +18,7 @@
             <option class="dropdown-content" value="4">fExCrop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
         </select> <!-- Crop Selection /> -->
         <!-- State Filters -->
-        <label class="operation-filters" for="application">Aplicação:</label>
+        <label class="analysis-filter" for="application">Aplicação:</label>
         <select class="form-select w-25" name="application-filter" id="application-filter">
             <option class="dropdown-content" value="1" selected>Application</option>
             <option class="dropdown-content" value="2">fExFertilization</option>
@@ -27,7 +27,7 @@
             <option class="dropdown-content" value="4">fExHarvest</option>
         </select> <!-- State Filters /> -->
         <!-- Application Filters -->
-        <label class="operation-filters" for="situation">Situação:</label>
+        <label class="analysis-filter" for="situation">Situação:</label>
         <select class="form-select w-25" name="state-filter" id="state-filter">
             <option class="dropdown-content" value="1" selected>State</option>
             <option class="dropdown-content" value="2">fExActive</option>
@@ -39,19 +39,19 @@
 </div> <!-- Crop & Filters Menu /> -->
 <!-- Operation Board -->
 <div id="info-menu">
-    <!-- Operation Header -->
-    <h1 class="monitoring-header"><i class="fa fa-desktop"></i> Monitoramento</h1> <!-- Header -->
+    <!-- Operation - Header Section -->
+    <h1 class="header-section"><i class="fa fa-desktop"></i> Monitoramento</h1> <!-- Header -->
     <div class="d-flex justify-content-end">
         <a name="add" id="item-add" class="add-remove-btn btn btn-primary" href="#" role="button"><i class="fa fa-plus" aria-hidden="true"></i> Adicionar </a> <!-- add -->
         <a name="remove" id="item-remove" class="add-remove-btn btn btn-primary" href="#" role="button"><i class="fa fa-minus" aria-hidden="true"></i> Remover </a> <!-- remove -->
-    </div> <!-- Operation Header /> -->
+    </div> <!-- Operation - Header Section /> -->
     <!-- Display Tables -->
-    <div class="monitoring-content align-items-center">
+    <div class="table-content-display align-items-center">
         <table class="table table-md table-bordered table-hover">
             <thead id="main-table" class="table-light">
                 <tr>
                     <th class="column-name" scope="col">Aplicação</th>
-                    <th class="column-name w-25" scope="col">Descrição</th>
+                    <th class="column-name" scope="col">Descrição</th>
                     <th class="column-name" scope="col">Data <img src="~/images/filter-top-bottom.svg" /></th>
                     <th class="column-name" scope="col">Situação <img src="~/images/filter-top-bottom.svg" /></th>
                     <th class="column-name" scope="col">Último Acesso <img src="~/images/filter-top-bottom.svg" /></th>

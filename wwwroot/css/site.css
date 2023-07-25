@@ -117,11 +117,11 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
 }
 
 /*! Btns */
-#operation-filters-first {
+#analysis-filter-first {
     padding-left: 0;
 }
 
-.operation-filters {
+.analysis-filter {
     padding: 0 10px;
     outline: none;
     border: none;
@@ -135,6 +135,7 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
     outline: none;
     font-weight: 600;
     border-radius: 0;
+    min-height: 60px;
 }
 
     .btn-primary:focus {
@@ -146,16 +147,16 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
         border-color: var(--alt-yellow);
     }
 
-.monitoring-header {
+.header-section {
     font-size: 40px;
     background: var(--std-black);
     color: var(--std-grey);
     font-weight: 600;
     width: 100%;
     text-align: center;
-    margin-bottom: 10px;
     height: 64px;
     line-height: 64px;
+    margin: 0;
 }
 
 .add-remove-btn {
@@ -164,7 +165,8 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
     padding: 0;
     line-height: 60px;
     height: 60px;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
 #item-add {
@@ -183,8 +185,14 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
         background: var(--alt-red);
     }
 
-.monitoring-content {
-    padding: 10px;
+
+.vehicle-btn {
+    min-width: 100px;
+    margin-bottom: 20px;
+}
+
+.table-content-display {
+    padding: 20px;
 }
 /*! Forms */
 .form-select {
@@ -508,14 +516,13 @@ nav-link:active {
 }
 
 .user-menu-info {
-    background: var(--std-black);
     display: flex;
     align-items: center;
 }
 
     .user-menu-info h5 {
         font-weight: 900;
-        color: var(--std-yellow);
+        color: var(--std-grey);
     }
 
     .user-menu-info .user-picture-menu {
@@ -533,7 +540,7 @@ nav-link:active {
 }
 
     .user-menu-links:hover {
-        background: var(--std-yellow);
+        background: var(--std-red);
         color: var(--std-grey);
     }
 
@@ -826,7 +833,6 @@ nav-link:active {
 }
 
 .report-output-img {
-    padding: 60px 0 0 60px;
     height: 100%;
     width: 100%;
     background: transparent;
@@ -863,9 +869,12 @@ nav-link:active {
 
 /*! Vehicles */
 #vehicles-nav {
-    margin-left: 0;
+    background: var(--std-white);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
 }
 
-#vehicles-nav {
-    box-shadow: var(--box-shadow);
+#map-vehicles {
+    background: var(--std-white);
+    padding: 0 20px 20px 20px;
 }
