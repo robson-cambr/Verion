@@ -232,6 +232,10 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
         box-shadow: none !important;
     }
 
+
+.custom-checkbox {
+    border: 1px solid var(--alt-grey);
+}
 /*! Tables */
 .column-name {
     text-align: center;
