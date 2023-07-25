@@ -36,7 +36,7 @@
     --alt-c-font: #EFEFEF;
     --font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    --box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
     --std-border-radius: 0px;
     /*! @media-query Variables */
     --breakpoint-xs: 0;
@@ -207,7 +207,7 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
 }
 
     .dropdown-content:hover {
-        background-color: var(--alt-grey);
+        background-color: var(--alt-red) !important;
     }
 
 /*! Checkbox */
@@ -377,6 +377,7 @@ nav-link:active {
         justify-content: center;
         background: var(--std-black);
         padding: 10px;
+        margin-bottom: 0 !important;
     }
 
         .pagination ul li {
@@ -800,12 +801,65 @@ nav-link:active {
 #info-menu {
     background-color: var(--std-white);
 }
+/**/
+.report-main {
+    padding: 20px;
+}
+
+
+.report-select-ratio {
+    margin-bottom: 20px;
+}
+
+.report-output-type {
+    justify-content: center;
+    width: 50%;
+}
+
+.info-selected-report {
+}
+
+    .info-selected-report span {
+        font-weight: 600;
+    }
+
+.report-output-img {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
 
 .report-item {
 }
 
     .report-item ul {
+        margin: 0;
     }
 
         .report-item ul li {
         }
+/**/
+.report-additional-info {
+    margin: 20px 20px 20px 0;
+    background: var(--std-white);
+}
+
+    .report-additional-info .report-additional-description {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        padding: 20px;
+        font-size: 20px
+    }
+
+        .report-additional-info .report-additional-description p {
+            color:var(--std-red);
+        }
+
+        #report-additional-info-first {
+            margin: 20px 20px 20px 0;
+        }
+
+#report-additional-info-last {
+    margin: 20px 0 20px 0;
+}

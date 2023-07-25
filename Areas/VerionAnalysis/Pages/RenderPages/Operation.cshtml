@@ -11,14 +11,14 @@
     <!-- Crop Selection -->
     <div class="d-flex align-items-center px-3">
         <label id="operation-filters-first" class="operation-filters" for="crop">Safra:</label>
-        <select class="form-select w-30" name="safra" id="safra">
-            <option class="dropdown-content" value="1" selected>Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
-            <option class="dropdown-content" value="2">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
-            <option class="dropdown-content" value="3">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
-            <option class="dropdown-content" value="4">Crop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+        <select class="form-select w-50" name="safra" id="safra">
+            <option class="dropdown-content" value="1" selected>fExCrop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="2">fExCrop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="3">fExCrop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
+            <option class="dropdown-content" value="4">fExCrop+Name+DtBeg:dd/mm/yyyy+DtEnd:dd/mm/yyyy</option>
         </select> <!-- Crop Selection /> -->
         <!-- State Filters -->
-        <label id="" class="operation-filters" for="filter">Aplicação:</label>
+        <label class="operation-filters" for="application">Aplicação:</label>
         <select class="form-select w-25" name="application-filter" id="application-filter">
             <option class="dropdown-content" value="1" selected>Application</option>
             <option class="dropdown-content" value="2">fExFertilization</option>
@@ -27,7 +27,7 @@
             <option class="dropdown-content" value="4">fExHarvest</option>
         </select> <!-- State Filters /> -->
         <!-- Application Filters -->
-        <label id="" class="operation-filters" for="filter">Situação:</label>
+        <label class="operation-filters" for="situation">Situação:</label>
         <select class="form-select w-25" name="state-filter" id="state-filter">
             <option class="dropdown-content" value="1" selected>State</option>
             <option class="dropdown-content" value="2">fExActive</option>
