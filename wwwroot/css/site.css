@@ -186,7 +186,7 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
 .monitoring-content {
     padding: 10px;
 }
-/* Forms */
+/*! Forms */
 .form-select {
     box-shadow: var(--box-shadow);
     outline: none;
@@ -199,7 +199,7 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
         outline: none !important;
     }
 
-/* Dropdown */
+/*! Dropdown */
 .dropdown-content {
     background-color: var(--std-grey);
     color: var(--std-black);
@@ -232,7 +232,7 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
         box-shadow: none !important;
     }
 
-/* Tables */
+/*! Tables */
 .column-name {
     text-align: center;
 }
@@ -245,7 +245,7 @@ select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:
     outline: 0 !important;
 }
 
-/* Text */
+/*! Text */
 hr {
     box-sizing: content-box;
     height: 0;
@@ -262,7 +262,7 @@ p {
     margin-bottom: 1em;
 }
 
-/* Links */
+/*! Links */
 a {
     text-decoration: none;
     color: var(--std-c-font);
@@ -328,7 +328,7 @@ footer .line {
     .social-icons a:hover {
     }
 
-/* General Headers */
+/*! General Headers */
 .custom-div {
     background-color: var(--std-grey);
 }
@@ -561,7 +561,7 @@ nav-link:active {
         font-weight: 600;
     }
 
-/* Icons */
+/*! Icons */
 .icon-button {
     background: transparent;
     position: relative;
@@ -711,7 +711,7 @@ nav-link:active {
             }
 
                 .side-bar .menu .item a:hover {
-                    background: var(--std-yellow);
+                    background: var(--std-red);
                     transition: 0.6s ease;
                 }
 
@@ -801,7 +801,8 @@ nav-link:active {
 #info-menu {
     background-color: var(--std-white);
 }
-/**/
+
+/*! Report */
 .report-main {
     padding: 20px;
 }
@@ -816,29 +817,21 @@ nav-link:active {
     width: 50%;
 }
 
-.info-selected-report {
+.info-selected-report span {
+    font-weight: 600;
 }
 
-    .info-selected-report span {
-        font-weight: 600;
-    }
-
 .report-output-img {
+    padding: 60px 0 0 60px;
     height: 100%;
     width: 100%;
     background: transparent;
 }
 
-.report-item {
+.report-item ul {
+    margin: 0;
 }
 
-    .report-item ul {
-        margin: 0;
-    }
-
-        .report-item ul li {
-        }
-/**/
 .report-additional-info {
     margin: 20px 20px 20px 0;
     background: var(--std-white);
@@ -853,12 +846,12 @@ nav-link:active {
     }
 
         .report-additional-info .report-additional-description p {
-            color:var(--std-red);
+            color: var(--std-red);
         }
 
-        #report-additional-info-first {
-            margin: 20px 20px 20px 0;
-        }
+#report-additional-info-first {
+    margin: 20px 20px 20px 0;
+}
 
 #report-additional-info-last {
     margin: 20px 0 20px 0;

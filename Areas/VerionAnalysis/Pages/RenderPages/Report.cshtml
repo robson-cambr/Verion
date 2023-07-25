@@ -6,11 +6,10 @@
     Layout = "~/Areas/VerionAnalysis/Pages/_AnalysisLayout.cshtml";
 }
 
-
 <!-- Report -->
 <!-- Report Selection -->
 <div class="mt-3 mb-3">
-    
+
     <div class="d-flex align-items-center px-3">
         <label id="operation-filters-first" class="operation-filters cols-6" for="crop">Planejamento:</label>
         <select class="form-select" name="safra" id="safra">
@@ -61,7 +60,6 @@
                 <label class="form-check-label" for="pontual-resumida">Pontual Resumida</label>
             </div>
         </div> <!-- Telemetry Options /> -->
-
         <!-- Scale Options -->
         <div class="">
             <select class="form-select">
@@ -71,7 +69,6 @@
                 <option class="dropdown-content" value="3">fExGraphic+Type+Three</option>
             </select>
         </div> <!-- Scale Options /> -->
-
         <!-- Measure  -->
         <div class="d-flex justify-content-center">
             <div class="m-3 text-center">
@@ -128,9 +125,8 @@
         </div>
         <button type="submit" class="btn btn-primary w-100">Aplicar Escala</button>
         <!-- Measure /> -->
-    </div>
-
-    <!-- Info Report Selected  - Center -->
+    </div> <!-- Info Report Selected  - Star /> -->
+    <!-- Info Report Selected  - End -->
     <div class="d-flex ps-3 col-9">
         <div class="col-3 report-info position-absolute">
             <!-- Collected Data -->
@@ -176,14 +172,13 @@
             </div> <!-- Reference - Intensity /> -->
         </div> <!-- Info Report Selected  - Center  /> -->
         <!-- Crop - Area Data -->
-        <div class="">
+        <div>
             <img class="report-output-img" src="~/images/telemetry-reference.png" />
         </div> <!-- Crop - Area Data /> -->
-    </div>
-    
+    </div> <!-- Info Report Selected  - End /> -->
+
 
 </div> <!-- Report Display /> -->
-
 <!-- Report Additional Info -->
 <div class="d-flex justify-content-between">
     <!-- Area -->
@@ -203,10 +198,8 @@
         <p id="tempo-data" class="h4 text-center">10h Trabalhada</p>
     </div> <!-- Elapsed Time /> -->
     <!-- Velocity -->
-    <!--DATA VELOCIDADE-->
     <div class="report-additional-info col">
         <div class="row justify-content-center">
-            <!--VELOCIDADE-->
             <div class="col-12">
                 <div class="report-additional-description d-flex justify-content-between">
                     <p>Velocidade</p>
@@ -219,14 +212,14 @@
                     <i class="fa fa-minus" aria-hidden="true"></i>
                 </div>
             </div>
-            <!--VELOCIDADE MEDIA-->
+            <!-- Average -->
             <div class="col-4 p-0">
                 <div class="d-flex flex-column justify-content-center align-items-center p-0 m-0">
                     <p class="m-0">60Km</p>
                     <p class="mt-1">Média</p>
                 </div>
-            </div>
-            <!--VELOCIDADE ALTA-->
+            </div> <!-- Average /> -->
+            <!-- Highest/Lowest Speed -->
             <div class="col-1 p-0 align-self-center">
                 <div class="d-flex px-2 pb-4">
                     <i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -237,7 +230,7 @@
                     <p class="m-0">40Km</p>
                     <p class="mt-1">Mínima</p>
                 </div>
-            </div>
+            </div><!-- Highest/Lowest Speed /> -->
         </div>
     </div>
     <!-- Dosage -->
@@ -256,80 +249,64 @@
         </div>
         <p id="alarme-data" class="h4 text-center">5</p>
     </div> <!-- Alarms /> -->
-</div>
-<!--DASHBOARD IDENTITY-->
-
+</div> <!-- Report Additional Info /> -->
+<!-- Identity -->
 <div class="d-inline-flex bg-white p-3 w-100 justify-content-between">
     <h3 class="m-0">Indentidade</h3>
-    <!--ID SELECTOR-->
+    <!-- Id -->
     <div class="d-inline-flex align-items-center">
         <label class="me-3" for="id-type">ID:</label>
         <select class="d-inline form-select" name="id-type" id="safra">
-            <option value="velocity" selected>Velocidade</option>
-            <option value="velocity">Velocidade</option>
-            <option value="velocity">Velocidade</option>
-            <option value="velocity">Velocidade</option>
+            <option class="dropdown-content" value="velocity" selected>fExVelocity</option>
+            <option class="dropdown-content" value="velocity">fExAlarm</option>
+            <option class="dropdown-content" value="velocity">fExArea</option>
+            <option class="dropdown-content" value="velocity">fExTime</option>
         </select>
-    </div>
-</div>
-
-<!--TABLE IDENTITY-->
-<div class="row">
-    <div class="col">
+    </div> <!-- Id /> -->
+</div> <!-- Identity /> -->
+<!-- Table -->
+<div id="info-menu">
+    <div class="monitoring-content align-items-center">
         <table class="table table-md table-bordered table-hover">
-            <thead class="table-light">
+            <thead id="main-table" class="table-light">
                 <tr>
-                    <th scope="col">Tipo</th>
-                    <th scope="col" class="w-25">Descrição</th>
-                    <th scope="col">Latitude</th>
-                    <th scope="col">Longitude</th>
-                    <th scope="col">Data</th>
+                    <th class="column-name" scope="col">Tipo</th>
+                    <th class="column-name" scope="col">Descrição</th>
+                    <th class="column-name" scope="col">Latitude</th>
+                    <th class="column-name" scope="col">Longitude</th>
+                    <th class="column-name" scope="col">Data</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>mdo</td>
+                    <th class="column-content" scope="row">1</th>
+                    <td class="column-content">Mark</td>
+                    <td class="column-content">Otto</td>
+                    <td class="column-content">mdo</td>
+                    <td class="column-content">mdo</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                    <td>mdo</td>
+                    <th class="column-content" scope="row">2</th>
+                    <td class="column-content">Jacob</td>
+                    <td class="column-content">Thornton</td>
+                    <td class="column-content">fat</td>
+                    <td class="column-content">mdo</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                    <td>mdo</td>
+                    <th class="column-content" scope="row">2</th>
+                    <td class="column-content">Jacob</td>
+                    <td class="column-content">Thornton</td>
+                    <td class="column-content">fat</td>
+                    <td class="column-content">mdo</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                    <td>mdo</td>
+                    <th class="column-content" scope="row">2</th>
+                    <td class="column-content">Jacob</td>
+                    <td class="column-content">Thornton</td>
+                    <td class="column-content">fat</td>
+                    <td class="column-content">mdo</td>
                 </tr>
             </tbody>
         </table>
     </div>
-</div>
-
-<style>
-
-    #operation,
-    #dashboard-identity {
-        background-color: #FFFF;
-        box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.3);
-    }
-
-    .form-check input {
-        border: 1px solid var(--bs-gray-400)
-    }
-
-</style>
+</div> <!-- Table /> -->
