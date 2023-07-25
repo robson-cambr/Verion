@@ -860,3 +860,12 @@ nav-link:active {
 #report-additional-info-last {
     margin: 20px 0 20px 0;
 }
+
+/*! Vehicles */
+#vehicles-nav {
+    margin-left: 0;
+}
+
+#vehicles-nav {
+    box-shadow: var(--box-shadow);
+}
